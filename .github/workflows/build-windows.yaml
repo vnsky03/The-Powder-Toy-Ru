@@ -24,7 +24,7 @@ jobs:
             mingw-w64-ucrt-x86_64-pkgconf
             mingw-w64-ucrt-x86_64-bzip2
             mingw-w64-ucrt-x86_64-jsoncpp
-            mingw-w64-ucrt-x86_64-libcurl
+            mingw-w64-ucrt-x86_64-curl
             mingw-w64-ucrt-x86_64-SDL2
             mingw-w64-ucrt-x86_64-libpng
             mingw-w64-ucrt-x86_64-fftw
