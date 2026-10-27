@@ -1,0 +1,42 @@
+#include "simulation/ElementCommon.h"
+
+void Element::Element_PLEX()
+{
+	Identifier = "DEFAULT_PT_PLEX";
+	Name = "Плексиглас";
+	Colour = 0xD080E0_rgb;
+	MenuVisible = 1;
+	MenuSection = SC_EXPLOSIVE;
+	Enabled = 1;
+
+	Advection = 0.0f;
+	AirDrag = 0.00f * CFDS;
+	AirLoss = 0.90f;
+	Loss = 0.00f;
+	Collision = 0.0f;
+	Gravity = 0.0f;
+	Diffusion = 0.00f;
+	HotAir = 0.000f	* CFDS;
+	Falldown = 0;
+
+	Flammable = 1000;
+	Explosive = 2;
+	Meltable = 50;
+	Hardness = 1;
+	PhotonReflectWavelengths = 0x1F00003E;
+
+	Weight = 100;
+
+	HeatConduct = 88;
+	Description = "Прозрачный материал, пропускает лазеры и фотоны.";
+	Properties = TYPE_SOLID | PROP_NEUTPENETRATE;
+
+	LowPressure = IPL;
+	LowPressureTransition = NT;
+	HighPressure = IPH;
+	HighPressureTransition = NT;
+	LowTemperature = ITL;
+	LowTemperatureTransition = NT;
+	HighTemperature = 673.0f;
+	HighTemperatureTransition = PT_FIRE; //@ PLEX -> FIRE
+}

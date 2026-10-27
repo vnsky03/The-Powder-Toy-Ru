@@ -1,0 +1,19 @@
+# Сборка и артефакты
+/build/
+*.app
+build/
+meson-private/
+
+# Локальные библиотеки, собранные без sudo
+fftw-install/
+jsoncpp-install/
+fftw-3.3.10/
+jsoncpp-1.9.6/
+*.tar.gz
+
+# Система
+.DS_Store
+
+# Временные файлы
+*.log
+/tmp/
