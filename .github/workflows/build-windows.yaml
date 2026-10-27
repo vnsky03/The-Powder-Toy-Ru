@@ -1,0 +1,46 @@
+name: build-windows
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+    branches:
+      - main
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - run: git config --global core.autocrlf false
+      - uses: actions/checkout@v6
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: MINGW64
+          update: true
+          install: >-
+            mingw-w64-x86_64-gcc
+            mingw-w64-x86_64-meson
+            mingw-w64-x86_64-ninja
+            mingw-w64-x86_64-pkgconf
+            mingw-w64-x86_64-bzip2
+            mingw-w64-x86_64-jsoncpp
+            mingw-w64-x86_64-libcurl
+            mingw-w64-x86_64-SDL2
+            mingw-w64-x86_64-libpng
+            mingw-w64-x86_64-fftw
+      - run: meson setup build -Dlua=none
+      - run: ninja -C build
+      - name: Упаковка
+        run: |
+          mkdir -p dist
+          cp build/powder.exe dist/ThePowderToy-RU.exe
+        shell: bash
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ThePowderToy-RU-windows
+          path: dist/ThePowderToy-RU.exe
+          if-no-files-found: error
