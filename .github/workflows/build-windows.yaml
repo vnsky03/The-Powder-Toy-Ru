@@ -11,9 +11,6 @@ on:
 jobs:
   windows:
     runs-on: windows-latest
-    defaults:
-      run:
-        shell: msys2 {0}
     steps:
       - run: git config --global core.autocrlf false
       - uses: actions/checkout@v6
@@ -32,13 +29,17 @@ jobs:
             mingw-w64-x86_64-SDL2
             mingw-w64-x86_64-libpng
             mingw-w64-x86_64-fftw
-      - run: meson setup build -Dlua=none
-      - run: ninja -C build
+      - name: Meson setup
+        shell: msys2 {0}
+        run: meson setup build -Dlua=none
+      - name: Ninja build
+        shell: msys2 {0}
+        run: ninja -C build
       - name: Упаковка
+        shell: msys2 {0}
         run: |
           mkdir -p dist
           cp build/powder.exe dist/ThePowderToy-RU.exe
-        shell: bash
       - uses: actions/upload-artifact@v4
         with:
           name: ThePowderToy-RU-windows
