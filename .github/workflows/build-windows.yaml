@@ -39,6 +39,7 @@ jobs:
         run: |
           mkdir -p dist
           cp build/powder.exe dist/ThePowderToy-RU.exe
+          cp INSTALL-WINDOWS.txt dist/ 2>/dev/null || true
           cp /ucrt64/bin/*.dll dist/ 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         with:
