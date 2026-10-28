@@ -34,13 +34,14 @@ jobs:
       - name: Ninja build
         shell: msys2 {0}
         run: ninja -C build
-      - name: Упаковка
+      - name: Упаковка (exe + все DLL)
         shell: msys2 {0}
         run: |
           mkdir -p dist
           cp build/powder.exe dist/ThePowderToy-RU.exe
+          cp /ucrt64/bin/*.dll dist/ 2>/dev/null || true
       - uses: actions/upload-artifact@v4
         with:
           name: ThePowderToy-RU-windows
-          path: dist/ThePowderToy-RU.exe
+          path: dist/
           if-no-files-found: error
