@@ -8,7 +8,7 @@ class GOLTool: public Tool
 	GameModel &gameModel;
 public:
 	GOLTool(GameModel &gameModel):
-		Tool(0, "CUST", "Add a new custom GOL type. (Use ctrl+shift+rightclick to remove them)",
+		Tool(0, "ПРАВИЛО", "Добавить новый тип «Жизни». (Ctrl+Shift+правый клик — удалить)",
 			0xFEA900_rgb, "DEFAULT_UI_ADDLIFE", nullptr
 		),
 		gameModel(gameModel)

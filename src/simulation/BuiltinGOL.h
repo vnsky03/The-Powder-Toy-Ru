@@ -6,6 +6,7 @@
 struct BuiltinGOL
 {
 	String name;
+	String displayName;
 	int oldtype;
 	int ruleset;
 	RGB colour = RGB(0, 0, 0);

@@ -569,14 +569,14 @@ void GameView::NotifyActiveMenuToolListChanged(GameModel * sender)
 			tempTexture = static_cast<DecorationTool *>(tool)->GetIcon(tool->ToolID, Vec2(26, 14));
 
 		if (tempTexture)
-			tempButton = new ToolButton(ui::Point(currentX, YRES+1), ui::Point(30, 18), "", tool->Identifier, tool->Description);
+			tempButton = new ToolButton(ui::Point(currentX, YRES+1), ui::Point(48, 18), "", tool->Identifier, tool->Description);
 		else
-			tempButton = new ToolButton(ui::Point(currentX, YRES+1), ui::Point(30, 18), tool->Name, tool->Identifier, tool->Description);
+			tempButton = new ToolButton(ui::Point(currentX, YRES+1), ui::Point(48, 18), tool->Name, tool->Identifier, tool->Description);
 
 		tempButton->ClipRect = RectSized(Vec2(1, RES.Y + 1), Vec2(RES.X - 1, 18));
 
 		//currentY -= 17;
-		currentX -= 31;
+		currentX -= 49;
 		tempButton->tool = tool;
 		tempButton->SetActionCallback({ [this, tempButton] {
 			auto *tool = tempButton->tool;
@@ -1147,7 +1147,12 @@ void GameView::OnMouseMove(int x, int y, int dx, int dy)
 		delayedActiveMenu = -1;
 	}
 
-	updateToolButtonScroll();
+	// РУ-русификатор: скроллировать панель элементов за курсором только
+	// когда курсор находится на самой панели (внизу экрана), а не в любой области игры.
+	if (y >= YRES && y <= YRES + 22)
+	{
+		updateToolButtonScroll();
+	}
 }
 
 void GameView::OnMouseDown(int x, int y, unsigned button)
