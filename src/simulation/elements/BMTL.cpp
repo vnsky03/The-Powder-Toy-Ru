@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_BMTL()
 {
 	Identifier = "DEFAULT_PT_BMTL";
-	Name = "Лом";
+	Name = "Ломкий металл";
 	Colour = 0x505070_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -29,7 +29,7 @@ void Element::Element_BMTL()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Ломается при контакте, в основном с серной кислотой.";
+	Description = "Ломкий металл. Обычный проводящий строительный материал, плавится и разрушается под давлением.";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC|PROP_HOT_GLOW;
 
 	LowPressure = IPL;

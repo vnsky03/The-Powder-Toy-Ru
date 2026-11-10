@@ -31,7 +31,7 @@ void Element::Element_VINE()
 	Weight = 100;
 
 	HeatConduct = 65;
-	Description = "Растёт, скользит, проводит.";
+	Description = "Лиана, может расти вдоль дерева.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

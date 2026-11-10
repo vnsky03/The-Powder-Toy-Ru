@@ -6,7 +6,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_HEAC()
 {
 	Identifier = "DEFAULT_PT_HEAC";
-	Name = "Нагреватель";
+	Name = "Теплопровод";
 	Colour = 0xCB6351_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +30,7 @@ void Element::Element_HEAC()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Нагревает соседние частицы. Чем больше энергии, тем сильнее.";
+	Description = "Быстрый проводник тепла.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

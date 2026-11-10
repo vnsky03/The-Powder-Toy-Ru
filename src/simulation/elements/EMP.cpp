@@ -7,7 +7,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_EMP()
 {
 	Identifier = "DEFAULT_PT_EMP";
-	Name = "Эл-маг. поле";
+	Name = "ЭМИ";
 	Colour = 0x66AAFF_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -31,7 +31,7 @@ void Element::Element_EMP()
 	Weight = 100;
 
 	HeatConduct = 121;
-	Description = "Нарушает работу электроники при контакте.";
+	Description = "Электромагнитный импульс. Выводит из строя включённую электронику.";
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

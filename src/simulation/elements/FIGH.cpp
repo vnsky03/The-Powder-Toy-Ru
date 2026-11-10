@@ -35,7 +35,7 @@ void Element::Element_FIGH()
 
 	DefaultProperties.temp = R_TEMP + 14.6f + 273.15f;
 	HeatConduct = 0;
-	Description = "Похож на человека, но агрессивен к другим персонажам и людям.";
+	Description = "Боец. Пытается убить стикменов. Сначала нужно дать ему элемент, которым он будет убивать.";
 	Properties = PROP_NOCTYPEDRAW;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

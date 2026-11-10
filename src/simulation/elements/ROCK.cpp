@@ -6,7 +6,7 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_ROCK()
 {
 	Identifier = "DEFAULT_PT_ROCK";
-	Name = "Камень";
+	Name = "Порода";
 	Colour = 0x727272_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +30,7 @@ void Element::Element_ROCK()
 	Weight = 100;
 
 	HeatConduct = 200;
-	Description = "Прочный камень, плавится в лаву при высоких температурах.";
+	Description = "Твёрдая, плавится в разные элементы.";
 	Properties = TYPE_SOLID | PROP_HOT_GLOW;
 
 	LowPressure = IPL;

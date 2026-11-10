@@ -27,7 +27,7 @@ void Element::Element_SAND()
 	Weight = 90;
 
 	HeatConduct = 150;
-	Description = "Сыпучий порошок.";
+	Description = "Песок. Тяжёлые частицы. Плавится в стекло.";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

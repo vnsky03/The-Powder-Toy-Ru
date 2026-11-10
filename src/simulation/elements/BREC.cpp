@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_BREC()
 {
 	Identifier = "DEFAULT_PT_BREC";
-	Name = "Бред";
+	Name = "Эл. лом";
 	Colour = 0x707060_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -29,7 +29,7 @@ void Element::Element_BREC()
 	Weight = 90;
 
 	HeatConduct = 211;
-	Description = "Во время рендеринга процессор выдает графическую ошибку.";
+	Description = "Сломанная электроника. Образуется после ЭМИ; под давлением и постоянными искрами превращается в экзотику.";
 	Properties = TYPE_PART|PROP_CONDUCTS|PROP_LIFE_DEC|PROP_HOT_GLOW;
 
 	LowPressure = IPL;

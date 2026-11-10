@@ -28,7 +28,7 @@ void Element::Element_NITR()
 	Weight = 23;
 
 	HeatConduct = 50;
-	Description = "Жидкая взрывчатка. Взрывается при сильном нагреве и давлении.";
+	Description = "Нитроглицерин. Взрывчатка, чувствительная к давлению. Смесь с глиной даёт тротил.";
 	Properties = TYPE_LIQUID;
 
 	LowPressure = IPL;

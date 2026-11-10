@@ -35,7 +35,7 @@ void Element::Element_SPRK()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Электроискра, быстро проводит и повреждает металл.";
+	Description = "Электричество. Основа всей электроники в игре, бежит по проводящим элементам.";
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

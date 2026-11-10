@@ -3,7 +3,7 @@
 void Element::Element_PSTS()
 {
 	Identifier = "DEFAULT_PT_PSTS";
-	Name = "Стойкий";
+	Name = "Тв.паста";
 	Colour = 0x776677_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
@@ -28,7 +28,7 @@ void Element::Element_PSTS()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Выдерживает давление.";
+	Description = "Твёрдая форма пасты.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = 0.5f;

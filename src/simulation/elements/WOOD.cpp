@@ -31,7 +31,7 @@ void Element::Element_WOOD()
 	Weight = 100;
 
 	HeatConduct = 164;
-	Description = "Горючий материал.";
+	Description = "Дерево, горючее.";
 	Properties = TYPE_SOLID | PROP_NEUTPENETRATE;
 
 	LowPressure = IPL;

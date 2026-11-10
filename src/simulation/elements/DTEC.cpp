@@ -29,7 +29,7 @@ void Element::Element_DTEC()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Определяет тип частиц и безопасен для них.";
+	Description = "Детектор: создаёт искру, когда рядом есть частица с его ctype.";
 	Properties = TYPE_SOLID;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

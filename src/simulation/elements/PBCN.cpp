@@ -7,7 +7,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_PBCN()
 {
 	Identifier = "DEFAULT_PT_PBCN";
-	Name = "Плазма-клона";
+	Name = "Клон-ПЛ";
 	Colour = 0x3B1D0A_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -31,7 +31,7 @@ void Element::Element_PBCN()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Клонирует соседние частицы, образуя жидкую плазму.";
+	Description = "Ломкий клон с питанием.";
 	Properties = TYPE_SOLID | PROP_PHOTPASS | PROP_NOCTYPEDRAW;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

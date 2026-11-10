@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_PVOD()
 {
 	Identifier = "DEFAULT_PT_PVOD";
-	Name = "Поглощающий";
+	Name = "Дыра-П";
 	Colour = 0x792020_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -30,7 +30,7 @@ void Element::Element_PVOD()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Поглощает окружающие частицы при подаче питания.";
+	Description = "Дыра с питанием. При включении уничтожает входящие частицы.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

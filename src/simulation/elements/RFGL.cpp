@@ -4,7 +4,7 @@
 void Element::Element_RFGL()
 {
 	Identifier = "DEFAULT_PT_RFGL";
-	Name = "Реф. газ";
+	Name = "Ж.хладагент";
 	Colour = 0x84C2CF_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_LIQUID;
@@ -28,7 +28,7 @@ void Element::Element_RFGL()
 	Weight = 10;
 
 	HeatConduct = 3;
-	Description = "Газ, преломляющий свет и отталкивающий частицы.";
+	Description = "Жидкий хладагент.";
 	Properties = TYPE_LIQUID|PROP_DEADLY;
 
 	LowPressure = 2;

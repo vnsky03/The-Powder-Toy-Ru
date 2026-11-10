@@ -28,7 +28,7 @@ void Element::Element_BIZR()
 	Weight = 30;
 
 	HeatConduct = 29;
-	Description = "Превращает Y-фотоны в X-фотоны и наоборот.";
+	Description = "Бизар… нарушает обычные смены состояний. Красит другие элементы своим цветом декорации.";
 	Properties = TYPE_LIQUID;
 
 	LowPressure = IPL;

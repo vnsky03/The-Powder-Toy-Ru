@@ -28,7 +28,7 @@ void Element::Element_LOVE()
 
 	DefaultProperties.temp = 373.0f;
 	HeatConduct = 40;
-	Description = "Размножается, но лишь иногда.";
+	Description = "Любовь…";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

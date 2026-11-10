@@ -7,7 +7,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_DEUT()
 {
 	Identifier = "DEFAULT_PT_DEUT";
-	Name = "Дейтерий";
+	Name = "Тяжёлая вода";
 	Colour = 0x00153F_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -32,7 +32,7 @@ void Element::Element_DEUT()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 251;
-	Description = "Тяжёлый водород. Плавится в H2 и проявляет свойства плазмы.";
+	Description = "Тяжёлая вода (оксид дейтерия). На холоде концентрируется, взрывается от нейтронов и протонов.";
 	Properties = TYPE_LIQUID|PROP_NEUTPASS;
 
 	LowPressure = IPL;

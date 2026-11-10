@@ -31,7 +31,7 @@ void Element::Element_PLUT()
 
 	DefaultProperties.temp = R_TEMP + 4.0f + 273.15f;
 	HeatConduct = 251;
-	Description = "Радиоактивный элемент, испускает нейтроны и создаёт тепло.";
+	Description = "Плутоний. Тяжёлые делящиеся частицы. Под давлением выделяет нейтроны.";
 	Properties = TYPE_PART|PROP_NEUTPASS|PROP_RADIOACTIVE;
 
 	LowPressure = IPL;

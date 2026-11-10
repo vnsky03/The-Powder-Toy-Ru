@@ -7,7 +7,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_PCLN()
 {
 	Identifier = "DEFAULT_PT_PCLN";
-	Name = "Порошковый клон";
+	Name = "Клон-П";
 	Colour = 0x3B3B0A_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -31,7 +31,7 @@ void Element::Element_PCLN()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Создаёт частицы с жёлтым свечением при контакте с соседними.";
+	Description = "Клон с питанием. При включении копирует любые частицы, которых касается.";
 	Properties = TYPE_SOLID | PROP_PHOTPASS | PROP_NOCTYPEDRAW;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

@@ -31,7 +31,7 @@ void Element::Element_URAN()
 
 	DefaultProperties.temp = R_TEMP + 30.0f + 273.15f;
 	HeatConduct = 251;
-	Description = "Радиоактивный элемент.";
+	Description = "Уран. Тяжёлые частицы. Под давлением выделяет тепло.";
 	Properties = TYPE_PART | PROP_RADIOACTIVE;
 
 	LowPressure = IPL;

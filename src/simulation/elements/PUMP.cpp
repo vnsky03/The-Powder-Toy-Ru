@@ -31,7 +31,7 @@ void Element::Element_PUMP()
 
 	DefaultProperties.temp = 273.15f;
 	HeatConduct = 0;
-	Description = "Толкает частицы при подаче питания.";
+	Description = "Насос давления. При включении задаёт давление, равное своей температуре («Нагрев» и «Охлаждение»).";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

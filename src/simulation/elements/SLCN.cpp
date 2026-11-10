@@ -7,7 +7,7 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_SLCN()
 {
 	Identifier = "DEFAULT_PT_SLCN";
-	Name = "Силикон";
+	Name = "Кремний";
 	Colour = 0xBCCDDF_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -31,7 +31,7 @@ void Element::Element_SLCN()
 	Weight = 90;
 
 	HeatConduct = 100;
-	Description = "Твёрдый, плавится в лаву при 4000°C.";
+	Description = "Кремниевый порошок. Ключевой ингредиент для получения многих материалов.";
 	Properties = TYPE_PART | PROP_CONDUCTS | PROP_HOT_GLOW | PROP_LIFE_DEC;
 
 	LowPressure = IPL;

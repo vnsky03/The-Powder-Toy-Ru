@@ -4,7 +4,7 @@
 void Element::Element_PPIP()
 {
 	Identifier = "DEFAULT_PT_PPIP";
-	Name = "Твёрдая труба";
+	Name = "Труба-П";
 	Colour = 0x444466_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -29,7 +29,7 @@ void Element::Element_PPIP()
 
 	DefaultProperties.temp = 295.15f;
 	HeatConduct = 251;
-	Description = "Твёрдая труба для жидкостей.";
+	Description = "Труба с питанием: P-тип включает, N-тип выключает.";
 	Properties = TYPE_SOLID | PROP_LIFE_DEC;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

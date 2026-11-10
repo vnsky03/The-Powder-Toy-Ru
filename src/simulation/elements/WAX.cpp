@@ -27,7 +27,7 @@ void Element::Element_WAX()
 	Weight = 100;
 
 	HeatConduct = 44;
-	Description = "Воск, плавится при нагревании.";
+	Description = "Горючий, плавится при умеренно высоких температурах.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

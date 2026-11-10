@@ -31,7 +31,7 @@ void Element::Element_LIFE()
 
 	DefaultProperties.temp = 9000.0f;
 	HeatConduct = 40;
-	Description = "Клеточный автомат «Жизнь». Регулируется стрелками.";
+	Description = "Игра «Жизнь». B3/S23";
 	Properties = TYPE_SOLID|PROP_LIFE;
 
 	LowPressure = IPL;

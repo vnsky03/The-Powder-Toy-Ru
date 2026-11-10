@@ -32,7 +32,7 @@ void Element::Element_POLO()
 
 	DefaultProperties.temp = 388.15f;
 	HeatConduct = 251;
-	Description = "Радиоактивный элемент, светится.";
+	Description = "Полоний, очень радиоактивен. Распадается на нейтроны и нагревается.";
 	Properties = TYPE_PART|PROP_NEUTPASS|PROP_RADIOACTIVE|PROP_LIFE_DEC|PROP_DEADLY;
 
 	LowPressure = IPL;

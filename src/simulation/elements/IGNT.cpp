@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_IGNT()
 {
 	Identifier = "DEFAULT_PT_IGNT";
-	Name = "Зажигание";
+	Name = "Запал";
 	Colour = 0xC0B050_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -29,7 +29,7 @@ void Element::Element_IGNT()
 	Weight = 100;
 
 	HeatConduct = 88;
-	Description = "Зажигает горючие материалы при контакте.";
+	Description = "Запальный шнур. Медленно горит от огня и искр.";
 	Properties = TYPE_SOLID | PROP_NEUTPENETRATE | PROP_SPARKSETTLE | PROP_LIFE_KILL;
 
 	LowPressure = IPL;

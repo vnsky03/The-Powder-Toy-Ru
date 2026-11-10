@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_MORT()
 {
 	Identifier = "DEFAULT_PT_MORT";
-	Name = "Цемент";
+	Name = "Паровоз";
 	Colour = 0xE0E0E0_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
@@ -30,7 +30,7 @@ void Element::Element_MORT()
 
 	DefaultProperties.temp = R_TEMP + 4.0f + 273.15f;
 	HeatConduct = 60;
-	Description = "Сухой цемент, при смешивании с водой становится бетоном.";
+	Description = "Паровоз.";
 	Properties = TYPE_GAS;
 
 	LowPressure = IPL;

@@ -3,7 +3,7 @@
 void Element::Element_PSCN()
 {
 	Identifier = "DEFAULT_PT_PSCN";
-	Name = "P-тип полупроводник";
+	Name = "P-тип";
 	Colour = 0x805050_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -28,7 +28,7 @@ void Element::Element_PSCN()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Полупроводник p-типа, проводит в зависимости от напряжения.";
+	Description = "Кремний P-типа. Передаёт ток любому проводнику. Включает материалы с питанием.";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

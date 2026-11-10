@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_VRSG()
 {
 	Identifier = "DEFAULT_PT_VRSG";
-	Name = "Зелёный вирус";
+	Name = "Вирус-газ";
 	Colour = 0xFE68FE_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_GAS;
@@ -31,7 +31,7 @@ void Element::Element_VRSG()
 
 	DefaultProperties.temp = 522.0f + 273.15f;
 	HeatConduct = 251;
-	Description = "Вирус с большей выживаемостью.";
+	Description = "Газовый вирус. Превращает всё, чего коснётся, в вирус.";
 	Properties = TYPE_GAS|PROP_DEADLY;
 	CarriesTypeIn = 1U << FIELD_TMP2;
 

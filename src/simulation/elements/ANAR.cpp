@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_ANAR()
 {
 	Identifier = "DEFAULT_PT_ANAR";
-	Name = "Анархист";
+	Name = "Антивоздух";
 	Colour = 0xFFFFEE_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -30,7 +30,7 @@ void Element::Element_ANAR()
 	Weight = 85;
 
 	HeatConduct = 70;
-	Description = "Заставляет частицы вести себя хаотично при контакте.";
+	Description = "Антивоздух. Очень лёгкая пыль, летит против гравитации. Горит с охлаждением, а не с нагревом.";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

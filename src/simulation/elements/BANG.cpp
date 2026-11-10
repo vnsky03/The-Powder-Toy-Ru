@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_BANG()
 {
 	Identifier = "DEFAULT_PT_BANG";
-	Name = "Ба-Бах";
+	Name = "Тротил";
 	Colour = 0xC05050_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -29,7 +29,7 @@ void Element::Element_BANG()
 	Weight = 100;
 
 	HeatConduct = 88;
-	Description = "Маленькая бомба, взрывается при контакте с элементами.";
+	Description = "Тротил: взрывается весь сразу.";
 	Properties = TYPE_SOLID | PROP_NEUTPENETRATE;
 
 	LowPressure = IPL;

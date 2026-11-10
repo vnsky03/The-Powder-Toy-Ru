@@ -29,7 +29,7 @@ void Element::Element_MERC()
 	Weight = 91;
 
 	HeatConduct = 251;
-	Description = "Жидкий металл, убивает людей.";
+	Description = "Ртуть. Объём меняется с температурой. Проводит ток.";
 	Properties = TYPE_LIQUID|PROP_CONDUCTS|PROP_NEUTABSORB|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

@@ -3,7 +3,7 @@
 void Element::Element_BHOL()
 {
 	Identifier = "DEFAULT_PT_BHOL";
-	Name = "Чёрная дыра";
+	Name = "Вакуум";
 	Colour = 0x303030_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -28,7 +28,7 @@ void Element::Element_BHOL()
 
 	DefaultProperties.temp = R_TEMP + 70.0f + 273.15f;
 	HeatConduct = 255;
-	Description = "Поглощает все частицы. Отключается электричеством.";
+	Description = "Вакуум: втягивает частицы и нагревается.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

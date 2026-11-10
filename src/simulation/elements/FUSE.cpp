@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_FUSE()
 {
 	Identifier = "DEFAULT_PT_FUSE";
-	Name = "Шнур";
+	Name = "Фитиль";
 	Colour = 0x0A5706_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -29,7 +29,7 @@ void Element::Element_FUSE()
 	Weight = 100;
 
 	HeatConduct = 200;
-	Description = "Передаёт огонь и направленные взрывы.";
+	Description = "Горит медленно. Загорается при очень высокой температуре или от искры.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

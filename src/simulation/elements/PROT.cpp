@@ -32,7 +32,7 @@ void Element::Element_PROT()
 	Weight = -1;
 
 	HeatConduct = 61;
-	Description = "Взаимодействует с нейтронами, переносит энергию в ПРНО.";
+	Description = "Протоны. Передают тепло материалам и снимают искры.";
 	Properties = TYPE_ENERGY;
 
 	LowPressure = IPL;

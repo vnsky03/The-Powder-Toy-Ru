@@ -31,7 +31,7 @@ void Element::Element_DMG()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Цвет меняется при получении повреждений.";
+	Description = "Создаёт разрушительное давление и ломает любые элементы, которых касается.";
 	Properties = TYPE_PART|PROP_SPARKSETTLE;
 
 	LowPressure = IPL;

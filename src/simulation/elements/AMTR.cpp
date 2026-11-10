@@ -30,7 +30,7 @@ void Element::Element_AMTR()
 	Weight = 100;
 
 	HeatConduct = 70;
-	Description = "Уничтожает любые частицы при контакте.";
+	Description = "Антиматерия: уничтожает большинство частиц.";
 	Properties = TYPE_GAS;
 
 	LowPressure = IPL;

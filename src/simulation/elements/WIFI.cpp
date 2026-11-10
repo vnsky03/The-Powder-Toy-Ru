@@ -30,7 +30,7 @@ void Element::Element_WIFI()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Передаёт сигнал между частицами.";
+	Description = "Беспроводной передатчик, передаёт искру любому другому Wi-Fi на том же температурном канале.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

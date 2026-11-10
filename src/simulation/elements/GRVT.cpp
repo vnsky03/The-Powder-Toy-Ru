@@ -7,7 +7,7 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_GRVT()
 {
 	Identifier = "DEFAULT_PT_GRVT";
-	Name = "Гравитация";
+	Name = "Гравитон";
 	Colour = 0x00EE76_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -31,7 +31,7 @@ void Element::Element_GRVT()
 	Weight = -1;
 
 	HeatConduct = 61;
-	Description = "Гравитационный коллапс при контакте.";
+	Description = "Гравитоны. Создают ньютоновскую гравитацию.";
 	Properties = TYPE_ENERGY|PROP_LIFE_DEC|PROP_LIFE_KILL_DEC;
 
 	LowPressure = IPL;

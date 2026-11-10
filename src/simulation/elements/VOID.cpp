@@ -3,7 +3,7 @@
 void Element::Element_VOID()
 {
 	Identifier = "DEFAULT_PT_VOID";
-	Name = "Пустота";
+	Name = "Дыра";
 	Colour = 0x790B0B_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -27,7 +27,7 @@ void Element::Element_VOID()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Поглощающий элемент.";
+	Description = "Дыра, поглощает любые частицы.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

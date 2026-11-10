@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_GLOW()
 {
 	Identifier = "DEFAULT_PT_GLOW";
-	Name = "Светлячок";
+	Name = "Сияние";
 	Colour = 0x445464_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -31,7 +31,7 @@ void Element::Element_GLOW()
 
 	DefaultProperties.temp = R_TEMP + 20.0f + 273.15f;
 	HeatConduct = 44;
-	Description = "Свечение, увеличивается при питании.";
+	Description = "Сияние: светится под давлением.";
 	Properties = TYPE_LIQUID | PROP_PHOTPASS | PROP_LIFE_DEC;
 
 	LowPressure = IPL;

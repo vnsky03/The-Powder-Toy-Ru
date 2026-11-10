@@ -29,7 +29,7 @@ void Element::Element_H2()
 	Weight = 1;
 
 	HeatConduct = 251;
-	Description = "Летучий газ, взрывается от искр и огня.";
+	Description = "Водород. Горит с кислородом, образуя воду. При высоких температуре и давлении вступает в синтез.";
 	Properties = TYPE_GAS | PROP_PHOTPASS;
 
 	LowPressure = IPL;

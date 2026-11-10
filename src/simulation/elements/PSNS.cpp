@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_PSNS()
 {
 	Identifier = "DEFAULT_PT_PSNS";
-	Name = "Датчик давления";
+	Name = "Дат.давл.";
 	Colour = 0xDB2020_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SENSOR;
@@ -30,7 +30,7 @@ void Element::Element_PSNS()
 
 	DefaultProperties.temp = 4.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Реагирует на изменение давления.";
+	Description = "Датчик давления: создаёт искру, когда давление выше его температуры.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

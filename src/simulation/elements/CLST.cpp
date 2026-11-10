@@ -7,7 +7,7 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_CLST()
 {
 	Identifier = "DEFAULT_PT_CLST";
-	Name = "Пластилин";
+	Name = "Глина";
 	Colour = 0xE4A4A4_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -31,7 +31,7 @@ void Element::Element_CLST()
 	Weight = 55;
 
 	HeatConduct = 70;
-	Description = "Липкая масса, которой можно лепить. Изменяет цвет при свечении.";
+	Description = "Глиняная пыль. При смешивании с водой даёт пасту.";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

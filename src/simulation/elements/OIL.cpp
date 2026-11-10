@@ -27,7 +27,7 @@ void Element::Element_OIL()
 	Weight = 20;
 
 	HeatConduct = 42;
-	Description = "Жидкое топливо, хорошо горит.";
+	Description = "Горючая. При низком давлении или высокой температуре превращается в газ.";
 	Properties = TYPE_LIQUID | PROP_NEUTPASS;
 
 	LowPressure = IPL;

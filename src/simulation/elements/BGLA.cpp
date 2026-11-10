@@ -3,7 +3,7 @@
 void Element::Element_BGLA()
 {
 	Identifier = "DEFAULT_PT_BGLA";
-	Name = "Синее стекло";
+	Name = "Стеклобой";
 	Colour = 0x606060_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -27,7 +27,7 @@ void Element::Element_BGLA()
 	Weight = 90;
 
 	HeatConduct = 150;
-	Description = "Проводит, под электричеством стреляет ламповым огнём через стеклянные частицы.";
+	Description = "Стеклобой: тяжёлые частицы, получаются при разрушении стекла под давлением. Плавится. Бублики.";
 	Properties = TYPE_PART | PROP_NEUTPASS | PROP_PHOTPASS | PROP_HOT_GLOW | PROP_DEADLY;
 
 	LowPressure = IPL;

@@ -27,7 +27,7 @@ void Element::Element_GUNP()
 	Weight = 85;
 
 	HeatConduct = 97;
-	Description = "Взрывается при контакте с огнём.";
+	Description = "Порох. Лёгкая пыль, взрывается от огня или искры.";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

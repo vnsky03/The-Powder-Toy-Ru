@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_VRSS()
 {
 	Identifier = "DEFAULT_PT_VRSS";
-	Name = "Синий вирус";
+	Name = "Вирус-тв.";
 	Colour = 0xD408CD_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
@@ -31,7 +31,7 @@ void Element::Element_VRSS()
 
 	DefaultProperties.temp = R_TEMP + 273.15f;
 	HeatConduct = 251;
-	Description = "Распространяется быстро, но со временем умирает.";
+	Description = "Твёрдый вирус. Превращает всё, чего коснётся, в вирус.";
 	Properties = TYPE_SOLID|PROP_DEADLY;
 	CarriesTypeIn = 1U << FIELD_TMP2;
 

@@ -31,7 +31,7 @@ void Element::Element_FILT()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Меняет цвет проходящего света. Свойства регулируются.";
+	Description = "Фильтр. Меняет цвет фотонов и бизара. Цвет зависит от температуры.";
 	Properties = TYPE_SOLID | PROP_PHOTPASS | PROP_NOAMBHEAT | PROP_LIFE_DEC;
 
 	LowPressure = IPL;

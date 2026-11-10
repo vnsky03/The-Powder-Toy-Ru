@@ -27,7 +27,7 @@ void Element::Element_DMND()
 	Weight = 100;
 
 	HeatConduct = 186;
-	Description = "Очень прочный.";
+	Description = "Алмаз. Неразрушим.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

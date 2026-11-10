@@ -31,7 +31,7 @@ void Element::Element_BOMB()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Взрывается при контакте с частицами. Продолжает движение и взрывается.";
+	Description = "Бомба. Взрывается и уничтожает все окружающие частицы, когда к чему-то прикоснётся.";
 	Properties = TYPE_PART|PROP_SPARKSETTLE;
 
 	LowPressure = IPL;

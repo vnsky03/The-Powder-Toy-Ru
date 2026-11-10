@@ -29,7 +29,7 @@ void Element::Element_BTRY()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Заряжается и разряжается, сохраняя энергию.";
+	Description = "Батарея. Вырабатывает бесконечное электричество.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

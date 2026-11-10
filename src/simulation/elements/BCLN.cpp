@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_BCLN()
 {
 	Identifier = "DEFAULT_PT_BCLN";
-	Name = "Синий клон";
+	Name = "Клон-Л";
 	Colour = 0xFFD040_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -29,7 +29,7 @@ void Element::Element_BCLN()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Клонирует соседние элементы, движется вверх.";
+	Description = "Ломкий клон: как обычный клон, но разрушается под давлением.";
 	Properties = TYPE_SOLID | PROP_PHOTPASS | PROP_LIFE_DEC | PROP_LIFE_KILL_DEC | PROP_NOCTYPEDRAW;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

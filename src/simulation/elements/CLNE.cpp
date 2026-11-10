@@ -29,7 +29,7 @@ void Element::Element_CLNE()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Клонирует соседние частицы.";
+	Description = "Клон. Копирует любые частицы, которых касается.";
 	Properties = TYPE_SOLID | PROP_PHOTPASS | PROP_NOCTYPEDRAW;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

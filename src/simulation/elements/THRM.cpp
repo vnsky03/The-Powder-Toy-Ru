@@ -27,7 +27,7 @@ void Element::Element_THRM()
 	Weight = 90;
 
 	HeatConduct = 211;
-	Description = "Очень горячий материал.";
+	Description = "Термит. Сгорает в очень горячий расплавленный металл.";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_LSNS()
 {
 	Identifier = "DEFAULT_PT_LSNS";
-	Name = "Датчик жизни";
+	Name = "Дат.жизни";
 	Colour = 0x336699_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SENSOR;
@@ -30,7 +30,7 @@ void Element::Element_LSNS()
 
 	DefaultProperties.temp = 4.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Реагирует на частицы с жизнью.";
+	Description = "Датчик жизни: создаёт искру, когда рядом есть частица, у которой life больше его температуры.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

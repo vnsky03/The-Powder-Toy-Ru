@@ -6,7 +6,7 @@ static void create(ELEMENT_CREATE_FUNC_ARGS);
 void Element::Element_PQRT()
 {
 	Identifier = "DEFAULT_PT_PQRT";
-	Name = "Твёрдый кварц";
+	Name = "Кв.пыль";
 	Colour = 0x88BBBB_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -30,7 +30,7 @@ void Element::Element_PQRT()
 	Weight = 90;
 
 	HeatConduct = 3;
-	Description = "Изменяет направление фотонов в зависимости от типа.";
+	Description = "Кварцевая пыль: раздробленная форма кварца.";
 	Properties = TYPE_PART | PROP_PHOTPASS | PROP_HOT_GLOW;
 
 	LowPressure = IPL;

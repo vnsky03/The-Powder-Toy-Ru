@@ -8,7 +8,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_PRTO()
 {
 	Identifier = "DEFAULT_PT_PRTO";
-	Name = "Отправка";
+	Name = "Порт.выход";
 	Colour = 0x0020EB_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -32,7 +32,7 @@ void Element::Element_PRTO()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Отправляет частицы типа PRTI.";
+	Description = "Портал-выход. Частицы выходят отсюда. Каналы зависят от температуры (как у Wi-Fi).";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

@@ -3,7 +3,7 @@
 void Element::Element_DYST()
 {
 	Identifier = "DEFAULT_PT_DYST";
-	Name = "Динамит";
+	Name = "Мёртвые дрожжи";
 	Colour = 0xBBB0A0_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_POWDERS;
@@ -27,7 +27,7 @@ void Element::Element_DYST()
 	Weight = 80;
 
 	HeatConduct = 70;
-	Description = "Взрывчатка.";
+	Description = "Мёртвые дрожжи.";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

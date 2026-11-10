@@ -5,7 +5,7 @@ int update(UPDATE_FUNC_ARGS);
 void Element::Element_RSST()
 {
 	Identifier = "DEFAULT_PT_RSST";
-	Name = "Сталь";
+	Name = "Резист";
 	Colour = 0xF95B49_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -30,7 +30,7 @@ void Element::Element_RSST()
 
 	DefaultProperties.temp = R_TEMP + 20.0f + 273.15f;
 	HeatConduct = 55;
-	Description = "Прочный металл, плавится при 2500°C.";
+	Description = "Резист. Твердеет при контакте с фотонами, разрушается электронами и искрой.";
 	Properties = TYPE_LIQUID | PROP_CONDUCTS | PROP_LIFE_DEC | PROP_NEUTPASS | PROP_PHOTPASS;
 	CarriesTypeIn = (1U << FIELD_CTYPE) | (1U << FIELD_TMP);
 

@@ -3,7 +3,7 @@
 void Element::Element_INWR()
 {
 	Identifier = "DEFAULT_PT_INWR";
-	Name = "Внутр. провод";
+	Name = "Изол.провод";
 	Colour = 0x544141_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -27,7 +27,7 @@ void Element::Element_INWR()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Невидимый проводник.";
+	Description = "Изолированный провод. Проводит только к P-типу, N-типу, Wi-Fi и переключателю.";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

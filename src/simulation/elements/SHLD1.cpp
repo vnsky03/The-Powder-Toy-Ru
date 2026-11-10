@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_SHLD1()
 {
 	Identifier = "DEFAULT_PT_SHLD1";
-	Name = "Щит";
+	Name = "Щит 1";
 	Colour = 0xAAAAAA_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -29,7 +29,7 @@ void Element::Element_SHLD1()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Блокирует фотоны и частицы сверху при подаче питания.";
+	Description = "Щит. Растёт вокруг искры, разрушается давлением.";
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

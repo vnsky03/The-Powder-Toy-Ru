@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_NBHL()
 {
 	Identifier = "DEFAULT_PT_NBHL";
-	Name = "Белая дыра";
+	Name = "Чёрная дыра";
 	Colour = 0x202020_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -29,7 +29,7 @@ void Element::Element_NBHL()
 	Weight = 100;
 
 	HeatConduct = 186;
-	Description = "Выталкивает частицы изнутри. Отключается электричеством.";
+	Description = "Чёрная дыра: втягивает частицы гравитацией. (Нужна ньютоновская гравитация.)";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

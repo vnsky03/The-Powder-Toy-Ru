@@ -32,7 +32,7 @@ void Element::Element_GOLD()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Проводник с высокой коррозионной стойкостью к большинству реакций.";
+	Description = "Коррозионно-стойкий металл, обращает вспять коррозию железа. Отличный проводник.";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_HOT_GLOW|PROP_LIFE_DEC|PROP_NEUTPASS;
 
 	LowPressure = IPL;

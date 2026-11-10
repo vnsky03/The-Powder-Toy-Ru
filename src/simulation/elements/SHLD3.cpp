@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_SHLD3()
 {
 	Identifier = "DEFAULT_PT_SHLD3";
-	Name = "Щит";
+	Name = "Щит 3";
 	Colour = 0x444444_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
@@ -29,7 +29,7 @@ void Element::Element_SHLD3()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Блокирует фотоны и частицы слева при подаче питания.";
+	Description = "Щит, уровень 3.";
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

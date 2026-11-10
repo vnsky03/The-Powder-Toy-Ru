@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_FIRW()
 {
 	Identifier = "DEFAULT_PT_FIRW";
-	Name = "Провод";
+	Name = "Салют";
 	Colour = 0xFFA040_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -30,7 +30,7 @@ void Element::Element_FIRW()
 	Weight = 55;
 
 	HeatConduct = 70;
-	Description = "Огнепровод: передаёт огонь и зажигает горючие элементы.";
+	Description = "Салют! Цветной, зажигается от огня.";
 	Properties = TYPE_PART|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

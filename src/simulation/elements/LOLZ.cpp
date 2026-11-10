@@ -4,7 +4,7 @@
 void Element::Element_LOLZ()
 {
 	Identifier = "DEFAULT_PT_LOLZ";
-	Name = "";
+	Name = "LOLZ";
 	Colour = 0x569212_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
@@ -29,7 +29,7 @@ void Element::Element_LOLZ()
 
 	DefaultProperties.temp = 373.0f;
 	HeatConduct = 40;
-	Description = "Что там было?";
+	Description = "Лолз";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

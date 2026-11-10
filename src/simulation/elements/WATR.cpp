@@ -30,7 +30,7 @@ void Element::Element_WATR()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Проводит электричество, замерзает и тушит огонь.";
+	Description = "Вода. Проводит электричество, замерзает и тушит огонь.";
 	Properties = TYPE_LIQUID | PROP_CONDUCTS | PROP_LIFE_DEC | PROP_NEUTPASS | PROP_PHOTPASS;
 
 	LowPressure = IPL;

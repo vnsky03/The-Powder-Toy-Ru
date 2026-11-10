@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_GPMP()
 {
 	Identifier = "DEFAULT_PT_GPMP";
-	Name = "Гравитационный насос";
+	Name = "Грав.насос";
 	Colour = 0x0A3B3B_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -30,7 +30,7 @@ void Element::Element_GPMP()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Толкает частицы к центру или от него при питании.";
+	Description = "Гравитационный насос. При включении задаёт гравитацию, равную своей температуре («Нагрев» и «Охлаждение»).";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

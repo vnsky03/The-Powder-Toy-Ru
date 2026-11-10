@@ -4,7 +4,7 @@
 void Element::Element_NTCT()
 {
 	Identifier = "DEFAULT_PT_NTCT";
-	Name = "N-термистор";
+	Name = "NTC";
 	Colour = 0x505040_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -28,7 +28,7 @@ void Element::Element_NTCT()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Проводит ток лучше при нагревании.";
+	Description = "NTC-термистор. Проводит вместе с P-типом и N-типом, но только при нагреве выше 100 °C.";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

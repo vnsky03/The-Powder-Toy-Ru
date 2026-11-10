@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_DRAY()
 {
 	Identifier = "DEFAULT_PT_DRAY";
-	Name = "Чернила";
+	Name = "Дубликатор";
 	Colour = 0xFFAA22_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -29,7 +29,7 @@ void Element::Element_DRAY()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Оставляет цветной след и взаимодействует с CONV.";
+	Description = "Дубликатор луча. Копирует линию частиц перед собой.";
 	Properties = TYPE_SOLID;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

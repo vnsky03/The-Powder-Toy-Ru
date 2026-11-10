@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_WIRE()
 {
 	Identifier = "DEFAULT_PT_WIRE";
-	Name = "Провод";
+	Name = "WireWorld";
 	Colour = 0xFFCC00_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -30,7 +30,7 @@ void Element::Element_WIRE()
 	Weight = 100;
 
 	HeatConduct = 250;
-	Description = "Проводит ток.";
+	Description = "Провода WireWorld: проводят по набору правил, похожих на «Жизнь».";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

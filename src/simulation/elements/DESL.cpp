@@ -27,7 +27,7 @@ void Element::Element_DESL()
 	Weight = 15;
 
 	HeatConduct = 42;
-	Description = "Дизельное топливо, взрывается при высоком давлении.";
+	Description = "Жидкий дизель. Взрывается при высоком давлении и температуре.";
 	Properties = TYPE_LIQUID;
 
 	LowPressure = IPL;

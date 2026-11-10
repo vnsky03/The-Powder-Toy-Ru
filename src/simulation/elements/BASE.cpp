@@ -31,7 +31,7 @@ void Element::Element_BASE()
 
 	HeatConduct = 31;
 	HeatCapacity = 1.5f;
-	Description = "Вступает в реакцию с кислотами.";
+	Description = "Едкая жидкость. Ржавит проводящие твёрдые тела, нейтрализует кислоту.";
 	Properties = TYPE_LIQUID|PROP_DEADLY;
 
 	LowPressure = IPL;

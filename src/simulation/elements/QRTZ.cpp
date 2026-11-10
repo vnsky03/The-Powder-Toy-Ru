@@ -30,7 +30,7 @@ void Element::Element_QRTZ()
 	Weight = 100;
 
 	HeatConduct = 3;
-	Description = "Изменяет направление движущихся частиц. Под давлением становится радиоактивным.";
+	Description = "Кварц, ломкий минерал. Проводит ток, но на холоде становится хрупким. Рассеивает фотоны.";
 	Properties = TYPE_SOLID | PROP_PHOTPASS | PROP_HOT_GLOW | PROP_LIFE_DEC;
 
 	LowPressure = IPL;

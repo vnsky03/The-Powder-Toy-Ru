@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_CONV()
 {
 	Identifier = "DEFAULT_PT_CONV";
-	Name = "Конвектор";
+	Name = "Конвертер";
 	Colour = 0x0AAB0A_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -29,7 +29,7 @@ void Element::Element_CONV()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Преобразует частицы на входе и выходе.";
+	Description = "Конвертер. Превращает всё в то, чего коснётся первым.";
 	Properties = TYPE_SOLID | PROP_NOCTYPEDRAW;
 	CarriesTypeIn = (1U << FIELD_CTYPE) | (1U << FIELD_TMP);
 

@@ -30,7 +30,7 @@ void Element::Element_FRZZ()
 
 	DefaultProperties.temp = 253.15f;
 	HeatConduct = 46;
-	Description = "Замораживает жидкости, пока не растает.";
+	Description = "Заморозка (порошок). При плавлении даёт лёд, который всегда охлаждает. Распространяется с обычной водой.";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

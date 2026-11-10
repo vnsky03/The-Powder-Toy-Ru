@@ -31,7 +31,7 @@ void Element::Element_DLAY()
 
 	DefaultProperties.temp = 4.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Задерживает сигнал на 1 кадр к каждому соседнему элементу.";
+	Description = "Проводит с задержкой, зависящей от температуры (задаётся инструментами «Нагрев» и «Охлаждение»).";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

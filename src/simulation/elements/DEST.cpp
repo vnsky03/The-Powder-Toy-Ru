@@ -30,7 +30,7 @@ void Element::Element_DEST()
 	Weight = 101;
 
 	HeatConduct = 150;
-	Description = "Разрушает большинство элементов при контакте.";
+	Description = "Разрушитель: более мощная бомба, пробивает почти всё.";
 	Properties = TYPE_PART|PROP_LIFE_DEC|PROP_LIFE_KILL_DEC;
 
 	LowPressure = IPL;

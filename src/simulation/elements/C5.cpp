@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_C5()
 {
 	Identifier = "DEFAULT_PT_C5";
-	Name = "Ц5";
+	Name = "C-5";
 	Colour = 0x2050E0_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -30,7 +30,7 @@ void Element::Element_C5()
 	Weight = 100;
 
 	HeatConduct = 88;
-	Description = "При попытке контакта отскакивает назад. Свойства фотонов.";
+	Description = "Холодная взрывчатка, срабатывает от всего холодного.";
 	Properties = TYPE_SOLID | PROP_NEUTPENETRATE | PROP_PHOTPASS | PROP_LIFE_DEC;
 
 	LowPressure = IPL;

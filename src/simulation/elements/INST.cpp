@@ -3,7 +3,7 @@
 void Element::Element_INST()
 {
 	Identifier = "DEFAULT_PT_INST";
-	Name = "Вспышка";
+	Name = "Мгн.пров.";
 	Colour = 0x404039_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -27,7 +27,7 @@ void Element::Element_INST()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Проводит мгновенно и порождает UHPC.";
+	Description = "Мгновенный проводник: P-тип заряжает, N-тип забирает заряд.";
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

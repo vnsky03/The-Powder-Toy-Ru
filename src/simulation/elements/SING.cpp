@@ -30,7 +30,7 @@ void Element::Element_SING()
 	Weight = 86;
 
 	HeatConduct = 70;
-	Description = "Создаёт чёрную дыру и взрыв.";
+	Description = "Сингулярность. Создаёт огромное отрицательное давление и уничтожает всё.";
 	Properties = TYPE_PART|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

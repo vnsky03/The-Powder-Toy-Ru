@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_NBLE()
 {
 	Identifier = "DEFAULT_PT_NBLE";
-	Name = "Пузырь";
+	Name = "Инертный газ";
 	Colour = 0xEB4917_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -31,7 +31,7 @@ void Element::Element_NBLE()
 
 	DefaultProperties.temp = R_TEMP + 2.0f + 273.15f;
 	HeatConduct = 106;
-	Description = "Газ, который держит частицы внутри пузыря.";
+	Description = "Инертный газ. Ионизируется в плазму от искры. Рассеивается.";
 	Properties = TYPE_GAS|PROP_CONDUCTS|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

@@ -28,7 +28,7 @@ void Element::Element_MWAX()
 
 	DefaultProperties.temp = R_TEMP + 28.0f + 273.15f;
 	HeatConduct = 44;
-	Description = "Расплавленный воск, затвердевает при охлаждении.";
+	Description = "Жидкий воск. Затвердевает в воск при 45 °C.";
 	Properties = TYPE_LIQUID;
 
 	LowPressure = IPL;

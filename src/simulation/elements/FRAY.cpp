@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_FRAY()
 {
 	Identifier = "DEFAULT_PT_FRAY";
-	Name = "Волокно";
+	Name = "Эмит.силы";
 	Colour = 0x00BBFF_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_FORCE;
@@ -30,7 +30,7 @@ void Element::Element_FRAY()
 
 	DefaultProperties.temp = 20.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Соединяется с соседними частицами и проводит.";
+	Description = "Эмиттер силы. Толкает или тянет объекты в зависимости от своей температуры. Применяется как излучатель.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

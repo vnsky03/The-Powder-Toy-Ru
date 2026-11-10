@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_HSWC()
 {
 	Identifier = "DEFAULT_PT_HSWC";
-	Name = "Переключатель нагревателя";
+	Name = "Тепл.ключ";
 	Colour = 0x3B0A0A_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -30,7 +30,7 @@ void Element::Element_HSWC()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Нагревает при подаче питания, охлаждает без него.";
+	Description = "Тепловой ключ. Проводит тепло, только когда включён.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

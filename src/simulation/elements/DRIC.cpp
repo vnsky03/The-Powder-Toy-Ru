@@ -28,7 +28,7 @@ void Element::Element_DRIC()
 
 	DefaultProperties.temp = 172.65f;
 	HeatConduct = 2;
-	Description = "Сублимируется при комнатной температуре.";
+	Description = "Сухой лёд, образуется при охлаждении углекислого газа.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

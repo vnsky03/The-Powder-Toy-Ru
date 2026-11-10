@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_GOO()
 {
 	Identifier = "DEFAULT_PT_GOO";
-	Name = "Гу";
+	Name = "Слизь";
 	Colour = 0x804000_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +30,7 @@ void Element::Element_GOO()
 	Weight = 100;
 
 	HeatConduct = 75;
-	Description = "Жидкость, превращается в иней при низких температурах.";
+	Description = "Деформируется и исчезает под давлением.";
 	Properties = TYPE_SOLID | PROP_NEUTPENETRATE|PROP_LIFE_DEC|PROP_LIFE_KILL_DEC;
 
 	LowPressure = IPL;

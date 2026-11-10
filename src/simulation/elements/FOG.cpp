@@ -30,7 +30,7 @@ void Element::Element_FOG()
 
 	DefaultProperties.temp = 243.15f;
 	HeatConduct = 100;
-	Description = "Водяной пар, конденсируется в воду при охлаждении.";
+	Description = "Туман, образуется при пропускании электрического тока через иней.";
 	Properties = TYPE_GAS|PROP_LIFE_DEC;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

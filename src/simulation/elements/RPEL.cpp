@@ -30,7 +30,7 @@ void Element::Element_RPEL()
 
 	DefaultProperties.temp = 20.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Отталкивает частицы при подаче питания.";
+	Description = "Отталкивает или притягивает частицы в зависимости от своей температуры.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

@@ -29,7 +29,7 @@ void Element::Element_O2()
 	Weight = 1;
 
 	HeatConduct = 70;
-	Description = "Необходим горению, газ.";
+	Description = "Кислород (газ). Легко воспламеняется.";
 	Properties = TYPE_GAS;
 
 	LowPressure = IPL;

@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_TSNS()
 {
 	Identifier = "DEFAULT_PT_TSNS";
-	Name = "Датчик температуры";
+	Name = "Дат.темп.";
 	Colour = 0xFD00D5_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SENSOR;
@@ -29,7 +29,7 @@ void Element::Element_TSNS()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Реагирует на изменение температуры.";
+	Description = "Датчик температуры: создаёт искру, когда рядом есть частица с большей температурой.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

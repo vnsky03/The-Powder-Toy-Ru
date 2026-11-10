@@ -32,7 +32,7 @@ void Element::Element_STOR()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Хранит частицы и выпускает их при подаче питания.";
+	Description = "Хранилище. Захватывает и хранит одну частицу. Выпускает при заряде P-типом, также передаёт в трубу.";
 	Properties = TYPE_SOLID | PROP_NOCTYPEDRAW;
 	CarriesTypeIn = (1U << FIELD_CTYPE) | (1U << FIELD_TMP);
 

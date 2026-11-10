@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_FSEP()
 {
 	Identifier = "DEFAULT_PT_FSEP";
-	Name = "Разделитель";
+	Name = "Фит.порошок";
 	Colour = 0x63AD5F_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -29,7 +29,7 @@ void Element::Element_FSEP()
 	Weight = 70;
 
 	HeatConduct = 70;
-	Description = "Область, разделяющая жидкости и порошки.";
+	Description = "Порошковый фитиль. Горит медленно, как фитиль.";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

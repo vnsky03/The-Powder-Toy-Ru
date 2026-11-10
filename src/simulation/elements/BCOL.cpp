@@ -4,7 +4,7 @@
 void Element::Element_BCOL()
 {
 	Identifier = "DEFAULT_PT_BCOL";
-	Name = "Синий уголь";
+	Name = "Колотый уголь";
 	Colour = 0x333333_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -29,7 +29,7 @@ void Element::Element_BCOL()
 	Weight = 90;
 
 	HeatConduct = 150;
-	Description = "Клонирует соседние частицы, остывая превращается в уголь.";
+	Description = "Колотый уголь. Тяжёлые частицы, горит медленно.";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

@@ -32,7 +32,7 @@ void Element::Element_TUNG()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Прочный металл с очень высокой температурой плавления.";
+	Description = "Вольфрам. Хрупкий металл с очень высокой температурой плавления.";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

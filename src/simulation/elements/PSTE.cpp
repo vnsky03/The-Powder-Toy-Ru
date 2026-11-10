@@ -28,7 +28,7 @@ void Element::Element_PSTE()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Липкая масса, образует соединения.";
+	Description = "Коллоид, твердеет под давлением.";
 	Properties = TYPE_LIQUID;
 
 	LowPressure = IPL;

@@ -4,7 +4,7 @@
 void Element::Element_BVBR()
 {
 	Identifier = "DEFAULT_PT_BVBR";
-	Name = "Вибрирующий мост";
+	Name = "Лом вибр.";
 	Colour = 0x005000_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -29,7 +29,7 @@ void Element::Element_BVBR()
 
 	DefaultProperties.temp = 273.15f;
 	HeatConduct = 164;
-	Description = "Действует как мост, но вибрирует и может разломаться.";
+	Description = "Сломанный вибраниум.";
 	Properties = TYPE_PART|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

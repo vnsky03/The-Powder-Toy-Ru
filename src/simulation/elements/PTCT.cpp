@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_PTCT()
 {
 	Identifier = "DEFAULT_PT_PTCT";
-	Name = "P-термистор";
+	Name = "PTC";
 	Colour = 0x405050_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -29,7 +29,7 @@ void Element::Element_PTCT()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Проводит ток хуже при нагревании.";
+	Description = "PTC-термистор. Проводит вместе с P-типом и N-типом, но только при охлаждении ниже 100 °C.";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

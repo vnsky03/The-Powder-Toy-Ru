@@ -31,7 +31,7 @@ void Element::Element_WARP()
 	Weight = 1;
 
 	HeatConduct = 100;
-	Description = "Искривляет пространство.";
+	Description = "Смещает другие элементы.";
 	Properties = TYPE_GAS|PROP_LIFE_DEC|PROP_LIFE_KILL;
 
 	LowPressure = IPL;

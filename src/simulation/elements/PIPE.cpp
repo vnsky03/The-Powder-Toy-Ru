@@ -34,7 +34,7 @@ void Element::Element_PIPE()
 
 	DefaultProperties.temp = 295.15f;
 	HeatConduct = 251;
-	Description = "Жидкая труба: поглощает, сжимает и выпускает жидкости.";
+	Description = "Труба, перемещает частицы. Когда появится кирпич, сотрите часть для выхода: труба достроится и заработает.";
 	Properties = TYPE_SOLID | PROP_LIFE_DEC;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

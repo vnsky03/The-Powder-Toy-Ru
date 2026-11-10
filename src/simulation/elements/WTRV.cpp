@@ -30,7 +30,7 @@ void Element::Element_WTRV()
 
 	DefaultProperties.temp = R_TEMP + 100.0f + 273.15f;
 	HeatConduct = 48;
-	Description = "Лёгкий газ, конденсируется в воду.";
+	Description = "Пар. Получается из горячей воды.";
 	Properties = TYPE_GAS;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

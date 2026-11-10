@@ -34,7 +34,7 @@ void Element::Element_LIGH()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Очень быстрый извилистый проводник.";
+	Description = "Молния. Размер молнии задаётся размером кисти.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

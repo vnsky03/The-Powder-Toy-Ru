@@ -29,7 +29,7 @@ void Element::Element_IRON()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Прочный металл, ржавеет под воздействием солёной воды и кислорода.";
+	Description = "Железо. Ржавеет от соли, годится для электролиза воды.";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC|PROP_HOT_GLOW;
 
 	LowPressure = IPL;

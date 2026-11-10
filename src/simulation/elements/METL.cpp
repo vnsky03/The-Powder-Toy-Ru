@@ -27,7 +27,7 @@ void Element::Element_METL()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Обычный проводник.";
+	Description = "Металл, основной проводник. Плавится.";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC|PROP_HOT_GLOW;
 
 	LowPressure = IPL;

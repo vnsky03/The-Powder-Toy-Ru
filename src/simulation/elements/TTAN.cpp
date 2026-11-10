@@ -30,7 +30,7 @@ void Element::Element_TTAN()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Прочный металл, плавится при 4000°C. Не ржавеет.";
+	Description = "Титан. Температура плавления выше, чем у большинства металлов, блокирует любое давление воздуха.";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_HOT_GLOW|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

@@ -30,7 +30,7 @@ void Element::Element_RIME()
 
 	DefaultProperties.temp = -30.0f + 273.15f;
 	HeatConduct = 100;
-	Description = "Холодный материал, поднимает дым, замораживает воду.";
+	Description = "Твёрдое вещество. Образуется при быстром охлаждении пара, который минует жидкую фазу.";
 	Properties = TYPE_SOLID;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

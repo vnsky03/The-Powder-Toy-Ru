@@ -4,7 +4,7 @@
 void Element::Element_BIZRG()
 {
 	Identifier = "DEFAULT_PT_BIZRG";
-	Name = "Зелёный бизар";
+	Name = "Бизар-газ";
 	Colour = 0x00FFBB_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_GAS;
@@ -29,7 +29,7 @@ void Element::Element_BIZRG()
 
 	DefaultProperties.temp = R_TEMP - 200.0f + 273.15f;
 	HeatConduct = 42;
-	Description = "Превращает Y-фотоны в X-фотоны.";
+	Description = "Бизар в виде газа.";
 	Properties = TYPE_GAS;
 
 	LowPressure = IPL;

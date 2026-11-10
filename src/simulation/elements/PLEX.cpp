@@ -3,7 +3,7 @@
 void Element::Element_PLEX()
 {
 	Identifier = "DEFAULT_PT_PLEX";
-	Name = "Плексиглас";
+	Name = "C-4";
 	Colour = 0xD080E0_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -28,7 +28,7 @@ void Element::Element_PLEX()
 	Weight = 100;
 
 	HeatConduct = 88;
-	Description = "Прозрачный материал, пропускает лазеры и фотоны.";
+	Description = "Твёрдая взрывчатка, чувствительная к давлению.";
 	Properties = TYPE_SOLID | PROP_NEUTPENETRATE;
 
 	LowPressure = IPL;

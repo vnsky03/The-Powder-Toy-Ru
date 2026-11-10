@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_LITH()
 {
 	Identifier = "DEFAULT_PT_LITH";
-	Name = "Кремний";
+	Name = "Литий";
 	Colour = 0xB6AABF_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -30,7 +30,7 @@ void Element::Element_LITH()
 	Weight = 17;
 
 	HeatConduct = 70;
-	Description = "Нормальный твёрдый элемент. Возможно, полупроводник.";
+	Description = "Литий. Активный элемент, взрывается при контакте с водой.";
 	Properties = TYPE_PART | PROP_LIFE_DEC;
 
 	LowPressure = IPL;

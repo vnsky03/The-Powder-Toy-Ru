@@ -27,7 +27,7 @@ void Element::Element_INSL()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Не проводит электричество и не разрушается.";
+	Description = "Изолятор. Блокирует тепло, электричество и излучение.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

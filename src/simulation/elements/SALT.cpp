@@ -27,7 +27,7 @@ void Element::Element_SALT()
 	Weight = 75;
 
 	HeatConduct = 110;
-	Description = "Повышает точку кипения воды и коррозию.";
+	Description = "Соль, растворяется в воде.";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

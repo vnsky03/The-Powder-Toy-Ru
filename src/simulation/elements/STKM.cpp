@@ -35,7 +35,7 @@ void Element::Element_STKM()
 
 	DefaultProperties.temp = R_TEMP + 14.6f + 273.15f;
 	HeatConduct = 0;
-	Description = "Персонаж, управляемый клавишами.";
+	Description = "Стикмен. Не убивайте его! Управление — стрелками.";
 	Properties = PROP_NOCTYPEDRAW;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

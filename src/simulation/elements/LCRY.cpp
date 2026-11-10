@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_LCRY()
 {
 	Identifier = "DEFAULT_PT_LCRY";
-	Name = "Живой кристалл";
+	Name = "Ж.кристалл";
 	Colour = 0x505050_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWERED;
@@ -30,7 +30,7 @@ void Element::Element_LCRY()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Растёт при питании, физически разрушается без него.";
+	Description = "Жидкий кристалл. Меняет цвет при заряде (P-тип заряжает, N-тип разряжает).";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

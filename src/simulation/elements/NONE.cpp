@@ -30,7 +30,7 @@ void Element::Element_NONE()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Пустой слот.";
+	Description = "Стирает частицы.";
 	Properties = 0;
 
 	LowPressure = IPL;

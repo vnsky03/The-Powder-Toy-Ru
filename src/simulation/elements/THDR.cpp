@@ -31,7 +31,7 @@ void Element::Element_THDR()
 
 	DefaultProperties.temp = 9000.0f + 273.15f;
 	HeatConduct = 1;
-	Description = "Громовая молния.";
+	Description = "Молния! Очень горячая, повреждает большинство материалов и передаёт ток металлам.";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

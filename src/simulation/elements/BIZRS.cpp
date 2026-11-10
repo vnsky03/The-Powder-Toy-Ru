@@ -4,7 +4,7 @@
 void Element::Element_BIZRS()
 {
 	Identifier = "DEFAULT_PT_BIZRS";
-	Name = "Синий бизар";
+	Name = "Бизар-тв.";
 	Colour = 0x00E455_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
@@ -29,7 +29,7 @@ void Element::Element_BIZRS()
 
 	DefaultProperties.temp = R_TEMP + 300.0f + 273.15f;
 	HeatConduct = 251;
-	Description = "Превращает X-фотоны в Y-фотоны.";
+	Description = "Бизар в виде твёрдого тела.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

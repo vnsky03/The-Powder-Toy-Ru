@@ -10,7 +10,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_PRTI()
 {
 	Identifier = "DEFAULT_PT_PRTI";
-	Name = "Приём";
+	Name = "Порт.вход";
 	Colour = 0xEB5917_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -34,7 +34,7 @@ void Element::Element_PRTI()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Принимает частицы типа PRTO.";
+	Description = "Портал-вход. Частицы входят сюда. Каналы зависят от температуры (как у Wi-Fi).";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

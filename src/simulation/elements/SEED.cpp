@@ -33,7 +33,7 @@ void Element::Element_SEED()
 	Weight = 36;
 
 	HeatConduct = 32;
-	Description = "Семена растений, распространяются по воздуху.";
+	Description = "Семена. Положите на песок и добавьте воды, чтобы вырастить дерево.";
 	Properties = TYPE_PART | PROP_NEUTPASS;
 
 	LowPressure = IPL;

@@ -33,7 +33,7 @@ void Element::Element_PLNT()
 	Weight = 100;
 
 	HeatConduct = 65;
-	Description = "Растёт из семян, может распространяться по воде.";
+	Description = "Растение: пьёт воду и растёт.";
 	Properties = TYPE_SOLID|PROP_NEUTPENETRATE|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

@@ -41,7 +41,7 @@ void Element::Element_SOAP()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Мыльная вода, образует пузыри.";
+	Description = "Мыло. Создаёт пузыри, смывает цвет декорации и лечит вирус.";
 	Properties = TYPE_LIQUID|PROP_NEUTPENETRATE|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

@@ -30,7 +30,7 @@ void Element::Element_SPNG()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Впитывает жидкости, под давлением выжимает их.";
+	Description = "Губка, впитывает воду. Неподвижное твёрдое тело.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

@@ -6,7 +6,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_LDTC()
 {
 	Identifier = "DEFAULT_PT_LDTC";
-	Name = "Твёрдый детектор";
+	Name = "Лин.детектор";
 	Colour = 0x66ff66_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SENSOR;
@@ -30,7 +30,7 @@ void Element::Element_LDTC()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Подобен DTEC, но твёрдый.";
+	Description = "Линейный детектор. Сканирует 8 направлений на частицы с его ctype и создаёт искру с противоположной стороны.";
 	Properties = TYPE_SOLID | PROP_NOCTYPEDRAW;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

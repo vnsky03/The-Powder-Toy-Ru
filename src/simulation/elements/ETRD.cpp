@@ -7,7 +7,7 @@ static void changeType(ELEMENT_CHANGETYPE_FUNC_ARGS);
 void Element::Element_ETRD()
 {
 	Identifier = "DEFAULT_PT_ETRD";
-	Name = "Электрод";
+	Name = "Эл.род";
 	Colour = 0x404040_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -31,7 +31,7 @@ void Element::Element_ETRD()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Слетает с поводков при подаче электричества.";
+	Description = "Электрод. Создаёт дуги плазмы при подаче тока (не злоупотребляйте).";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

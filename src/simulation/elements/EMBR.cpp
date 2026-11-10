@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_EMBR()
 {
 	Identifier = "DEFAULT_PT_EMBR";
-	Name = "Импульс";
+	Name = "Угольки";
 	Colour = 0xFFF288_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_EXPLOSIVE;
@@ -31,7 +31,7 @@ void Element::Element_EMBR()
 
 	DefaultProperties.temp = 500.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "При контакте добавляет импульс.";
+	Description = "Угольки: искры, образуются при взрывах.";
 	Properties = TYPE_PART|PROP_LIFE_DEC|PROP_LIFE_KILL|PROP_SPARKSETTLE;
 
 	LowPressure = IPL;

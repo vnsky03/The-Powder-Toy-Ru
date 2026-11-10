@@ -30,7 +30,7 @@ void Element::Element_ICEI()
 
 	DefaultProperties.temp = R_TEMP - 50.0f + 273.15f;
 	HeatConduct = 46;
-	Description = "Замёрзшая вода. Твёрдый и скользкий.";
+	Description = "Крошится под давлением. Охлаждает воздух.";
 	Properties = TYPE_SOLID|PROP_LIFE_DEC|PROP_NEUTPASS;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

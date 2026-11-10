@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_BOYL()
 {
 	Identifier = "DEFAULT_PT_BOYL";
-	Name = "Кулон";
+	Name = "Бойль";
 	Colour = 0x0A3200_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -30,7 +30,7 @@ void Element::Element_BOYL()
 
 	DefaultProperties.temp = R_TEMP + 2.0f + 273.15f;
 	HeatConduct = 42;
-	Description = "Притягивается к заряженным частицам при ньютоновской гравитации.";
+	Description = "Газ Бойля с переменным давлением. Расширяется при нагреве.";
 	Properties = TYPE_GAS;
 
 	LowPressure = IPL;

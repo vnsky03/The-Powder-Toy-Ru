@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_DCEL()
 {
 	Identifier = "DEFAULT_PT_DCEL";
-	Name = "Твёрдый ток";
+	Name = "Замедлитель";
 	Colour = 0x99CC00_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_FORCE;
@@ -30,7 +30,7 @@ void Element::Element_DCEL()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Быстро передаёт энергию сквозь соседние частицы.";
+	Description = "Замедлитель: замедляет соседние элементы.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

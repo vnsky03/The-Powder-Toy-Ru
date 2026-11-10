@@ -30,7 +30,7 @@ void Element::Element_PTNM()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Прочный металл, который нельзя расплавить. Хорошо проводит ток.";
+	Description = "Платина. Катализирует некоторые реакции.";
 	Properties = TYPE_SOLID | PROP_CONDUCTS | PROP_LIFE_DEC | PROP_HOT_GLOW | PROP_SPARKSETTLE;
 
 	LowPressure = IPL;

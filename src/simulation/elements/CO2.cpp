@@ -29,7 +29,7 @@ void Element::Element_CO2()
 	Weight = 1;
 
 	HeatConduct = 88;
-	Description = "Тяжёлый газ, отравляющий людей и охлаждающий пламя.";
+	Description = "Углекислый газ. Тяжёлый газ, оседает вниз. Газирует воду, на холоде превращается в сухой лёд.";
 	Properties = TYPE_GAS;
 
 	LowPressure = IPL;

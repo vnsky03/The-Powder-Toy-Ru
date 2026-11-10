@@ -3,7 +3,7 @@
 void Element::Element_NSCN()
 {
 	Identifier = "DEFAULT_PT_NSCN";
-	Name = "N-тип полупроводник";
+	Name = "N-тип";
 	Colour = 0x505080_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -28,7 +28,7 @@ void Element::Element_NSCN()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Полупроводник n-типа, проводит в зависимости от напряжения.";
+	Description = "Кремний N-типа. Не передаёт ток кремнию P-типа. Отключает материалы с питанием.";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

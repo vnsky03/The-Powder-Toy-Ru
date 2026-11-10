@@ -36,7 +36,7 @@ void Element::Element_PSTN()
 
 	DefaultProperties.temp = 10.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Твердеет и создаёт звуковые импульсы при контакте с частицами.";
+	Description = "Поршень, толкает частицы. P-тип выдвигает, N-тип втягивает.";
 	Properties = TYPE_SOLID;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

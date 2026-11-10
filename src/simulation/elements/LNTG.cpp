@@ -3,7 +3,7 @@
 void Element::Element_LNTG()
 {
 	Identifier = "DEFAULT_PT_LNTG";
-	Name = "Нить";
+	Name = "Ж.азот";
 	Colour = 0x80A0DF_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -28,7 +28,7 @@ void Element::Element_LNTG()
 
 	DefaultProperties.temp = 70.15f;
 	HeatConduct = 70;
-	Description = "Испускает видимый свет при прохождении тока.";
+	Description = "Жидкий азот. Очень холодный, исчезает при касании чего-либо теплее.";
 	Properties = TYPE_LIQUID;
 
 	LowPressure = IPL;

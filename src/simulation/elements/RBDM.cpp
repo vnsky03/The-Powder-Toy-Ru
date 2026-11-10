@@ -3,7 +3,7 @@
 void Element::Element_RBDM()
 {
 	Identifier = "DEFAULT_PT_RBDM";
-	Name = "Резина";
+	Name = "Рубидий";
 	Colour = 0xCCCCCC_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -27,7 +27,7 @@ void Element::Element_RBDM()
 	Weight = 100;
 
 	HeatConduct = 240;
-	Description = "Отталкивает частицы, подвержена повреждениям.";
+	Description = "Рубидий. Взрывоопасен, особенно при контакте с водой. Низкая температура плавления.";
 	Properties = TYPE_SOLID|PROP_CONDUCTS|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

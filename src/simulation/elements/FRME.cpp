@@ -29,7 +29,7 @@ void Element::Element_FRME()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Область из прочных частиц, блокирует частицы определённого типа.";
+	Description = "Рамка: вместе с поршнями двигает сразу много частиц.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

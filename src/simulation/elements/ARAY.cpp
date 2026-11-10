@@ -30,7 +30,7 @@ void Element::Element_ARAY()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Излучает фотоны или другую энергию в выбранном направлении.";
+	Description = "Излучатель лучей. Лучи создают точки при столкновении.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

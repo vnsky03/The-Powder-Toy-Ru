@@ -8,7 +8,7 @@ static unsigned int wavelengthToDecoColour(int wavelength);
 void Element::Element_CRAY()
 {
 	Identifier = "DEFAULT_PT_CRAY";
-	Name = "Мелок";
+	Name = "Пучок";
 	Colour = 0xBBFF00_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_ELEC;
@@ -32,7 +32,7 @@ void Element::Element_CRAY()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Оставляет цветной след. Взаимодействует с CONV.";
+	Description = "Эмиттер пучка частиц. Создаёт пучок частиц типа ctype, дальность задаёт tmp.";
 	Properties = TYPE_SOLID;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

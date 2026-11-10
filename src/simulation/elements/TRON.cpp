@@ -10,7 +10,7 @@ static int new_tronhead(Simulation * sim, int x, int y, int i, int direction);
 void Element::Element_TRON()
 {
 	Identifier = "DEFAULT_PT_TRON";
-	Name = "Ликвид";
+	Name = "Трон";
 	Colour = 0xA9FF00_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -35,7 +35,7 @@ void Element::Element_TRON()
 
 	DefaultProperties.temp = 0.0f;
 	HeatConduct = 40;
-	Description = "Странный электронный материал.";
+	Description = "Умные частицы: движутся по прямой и обходят препятствия. Со временем растут.";
 	Properties = TYPE_SOLID|PROP_LIFE_DEC|PROP_LIFE_KILL;
 
 	LowPressure = IPL;

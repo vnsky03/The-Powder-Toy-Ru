@@ -3,7 +3,7 @@
 void Element::Element_E116()
 {
 	Identifier = "DEFAULT_PT_116";
-	Name = "";
+	Name = "EQVE";
 	Colour = 0xFFE0A0_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_SPECIAL;
@@ -27,7 +27,7 @@ void Element::Element_E116()
 	Weight = 85;
 
 	HeatConduct = 70;
-	Description = "Секретный элемент.";
+	Description = "Неудачный тест общей скорости.";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

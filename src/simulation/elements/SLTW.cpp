@@ -29,7 +29,7 @@ void Element::Element_SLTW()
 	Weight = 35;
 
 	HeatConduct = 75;
-	Description = "Замерзает при -21,1°C. Коррозия металлов.";
+	Description = "Солёная вода, проводит ток, трудно замерзает.";
 	Properties = TYPE_LIQUID | PROP_CONDUCTS | PROP_LIFE_DEC | PROP_NEUTPENETRATE | PROP_PHOTPASS;
 
 	LowPressure = IPL;

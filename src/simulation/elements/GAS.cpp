@@ -28,7 +28,7 @@ void Element::Element_GAS()
 
 	DefaultProperties.temp = R_TEMP + 2.0f + 273.15f;
 	HeatConduct = 42;
-	Description = "Взрывается под давлением, очень летуч.";
+	Description = "Быстро рассеивается и горюч. Под давлением превращается в нефть.";
 	Properties = TYPE_GAS | PROP_NEUTPASS;
 
 	LowPressure = IPL;

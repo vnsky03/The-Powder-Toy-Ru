@@ -3,7 +3,7 @@
 void Element::Element_LRBD()
 {
 	Identifier = "DEFAULT_PT_LRBD";
-	Name = "Кулон влево";
+	Name = "Ж.рубидий";
 	Colour = 0xAAAAAA_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_EXPLOSIVE;
@@ -28,7 +28,7 @@ void Element::Element_LRBD()
 
 	DefaultProperties.temp = R_TEMP + 45.0f + 273.15f;
 	HeatConduct = 170;
-	Description = "Летит влево и вправо при ньютоновской гравитации.";
+	Description = "Жидкий рубидий.";
 	Properties = TYPE_LIQUID|PROP_CONDUCTS|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

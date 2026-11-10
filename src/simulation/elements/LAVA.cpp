@@ -33,7 +33,7 @@ void Element::Element_LAVA()
 
 	DefaultProperties.temp = R_TEMP + 1500.0f + 273.15f;
 	HeatConduct = 60;
-	Description = "Расплавленный камень. Затвердевает при охлаждении.";
+	Description = "Расплавленная лава. Поджигает горючее. Возникает при плавлении металлов и других веществ, остывая, твердеет.";
 	Properties = TYPE_LIQUID|PROP_LIFE_DEC;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

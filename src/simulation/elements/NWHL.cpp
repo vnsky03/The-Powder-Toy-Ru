@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_NWHL()
 {
 	Identifier = "DEFAULT_PT_NWHL";
-	Name = "Нейтронная червоточина";
+	Name = "Белая дыра";
 	Colour = 0xFFFFFF_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -29,7 +29,7 @@ void Element::Element_NWHL()
 	Weight = 100;
 
 	HeatConduct = 186;
-	Description = "Выпускает нейтроны при подаче питания.";
+	Description = "Белая дыра: отталкивает частицы гравитацией. (Нужна ньютоновская гравитация.)";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

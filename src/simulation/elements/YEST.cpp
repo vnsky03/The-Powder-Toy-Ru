@@ -29,7 +29,7 @@ void Element::Element_YEST()
 	Weight = 80;
 
 	HeatConduct = 70;
-	Description = "Растут в воде с сахаром.";
+	Description = "Дрожжи, растут в тепле (~37 °C).";
 	Properties = TYPE_PART;
 
 	LowPressure = IPL;

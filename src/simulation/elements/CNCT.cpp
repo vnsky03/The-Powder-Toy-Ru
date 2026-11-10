@@ -27,7 +27,7 @@ void Element::Element_CNCT()
 	Weight = 55;
 
 	HeatConduct = 100;
-	Description = "Прочный строительный материал, превращается в пыль при сильных температурах.";
+	Description = "Бетон. Может лежать на себе и на породе, рушится под давлением.";
 	Properties = TYPE_PART|PROP_HOT_GLOW;
 
 	LowPressure = IPL;

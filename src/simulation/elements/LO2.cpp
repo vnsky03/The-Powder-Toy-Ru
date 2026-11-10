@@ -3,7 +3,7 @@
 void Element::Element_LO2()
 {
 	Identifier = "DEFAULT_PT_LO2";
-	Name = "Жидкий кислород";
+	Name = "Ж.кислород";
 	Colour = 0x80A0EF_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -28,7 +28,7 @@ void Element::Element_LO2()
 
 	DefaultProperties.temp = 80.0f;
 	HeatConduct = 70;
-	Description = "Сильный окислитель, очень холодный.";
+	Description = "Жидкий кислород. Очень холодный. Реагирует с огнём.";
 	Properties = TYPE_LIQUID;
 
 	LowPressure = IPL;

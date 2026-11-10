@@ -4,7 +4,7 @@
 void Element::Element_RFRG()
 {
 	Identifier = "DEFAULT_PT_RFRG";
-	Name = "Рефрижератор";
+	Name = "Хладагент";
 	Colour = 0x72D2D4_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -28,7 +28,7 @@ void Element::Element_RFRG()
 	Weight = 1;
 
 	HeatConduct = 3;
-	Description = "Охлаждает контактные частицы при подаче питания.";
+	Description = "Хладагент. Нагревается и сжижается под давлением.";
 	Properties = TYPE_GAS|PROP_DEADLY;
 
 	LowPressure = IPL;

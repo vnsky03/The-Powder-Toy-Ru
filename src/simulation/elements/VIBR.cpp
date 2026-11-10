@@ -4,7 +4,7 @@
 void Element::Element_VIBR()
 {
 	Identifier = "DEFAULT_PT_VIBR";
-	Name = "Вибратор";
+	Name = "Вибраниум";
 	Colour = 0x005000_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -29,7 +29,7 @@ void Element::Element_VIBR()
 
 	DefaultProperties.temp = 273.15f;
 	HeatConduct = 251;
-	Description = "Генерирует вибрации при подаче питания.";
+	Description = "Вибраниум. Накапливает энергию и выпускает её в сильных взрывах.";
 	Properties = TYPE_SOLID|PROP_LIFE_DEC;
 
 	LowPressure = IPL;

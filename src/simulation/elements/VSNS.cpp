@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_VSNS()
 {
 	Identifier = "DEFAULT_PT_VSNS";
-	Name = "Датчик скорости";
+	Name = "Дат.скор.";
 	Colour = 0x7C9C00_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SENSOR;
@@ -30,7 +30,7 @@ void Element::Element_VSNS()
 
 	DefaultProperties.temp = 4.0f + 273.15f;
 	HeatConduct = 0;
-	Description = "Создаёт электричество при движении частиц.";
+	Description = "Датчик скорости: создаёт искру, когда рядом есть частица со скоростью выше его температуры.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

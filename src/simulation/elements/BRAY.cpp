@@ -29,7 +29,7 @@ void Element::Element_BRAY()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Фотон, движущийся очень быстро.";
+	Description = "Точка луча. Лучи создают точки при столкновении.";
 	Properties = TYPE_SOLID|PROP_LIFE_DEC|PROP_LIFE_KILL;
 
 	LowPressure = IPL;

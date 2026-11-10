@@ -6,7 +6,7 @@ static void changeType(ELEMENT_CHANGETYPE_FUNC_ARGS);
 void Element::Element_SPAWN2()
 {
 	Identifier = "DEFAULT_PT_SPAWN2";
-	Name = "Призыв 2";
+	Name = "Спавн 2";
 	Colour = 0xAAAAAA_rgb;
 	MenuVisible = 0;
 	MenuSection = SC_SOLIDS;
@@ -30,7 +30,7 @@ void Element::Element_SPAWN2()
 	Weight = 100;
 
 	HeatConduct = 0;
-	Description = "Призывает и клонирует частицы.";
+	Description = "Точка появления второго стикмена.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

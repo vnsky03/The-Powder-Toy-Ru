@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_BRMT()
 {
 	Identifier = "DEFAULT_PT_BRMT";
-	Name = "Бронза";
+	Name = "Лом";
 	Colour = 0x705060_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -29,7 +29,7 @@ void Element::Element_BRMT()
 	Weight = 90;
 
 	HeatConduct = 211;
-	Description = "Прочный сплав, очень медленно ржавеет.";
+	Description = "Лом: сломанный металл. Образуется при ржавении железа и при разрушении металлов под давлением.";
 	Properties = TYPE_PART|PROP_CONDUCTS|PROP_LIFE_DEC|PROP_HOT_GLOW;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

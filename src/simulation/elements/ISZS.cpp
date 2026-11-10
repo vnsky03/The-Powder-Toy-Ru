@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_ISZS()
 {
 	Identifier = "DEFAULT_PT_ISZS";
-	Name = "Озон";
+	Name = "Z-изот.тв.";
 	Colour = 0x662089_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -30,7 +30,7 @@ void Element::Element_ISZS()
 
 	DefaultProperties.temp = 140.00f;
 	HeatConduct = 251;
-	Description = "Взаимодействует с NUCL и взрывается от фотонов.";
+	Description = "Твёрдый Z-изотоп, медленно распадается на фотоны.";
 	Properties = TYPE_SOLID | PROP_PHOTPASS;
 
 	LowPressure = IPL;

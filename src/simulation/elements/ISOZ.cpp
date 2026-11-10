@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_ISOZ()
 {
 	Identifier = "DEFAULT_PT_ISOZ";
-	Name = "Озоновый слой";
+	Name = "Z-изотоп";
 	Colour = 0xAA30D0_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_NUCLEAR;
@@ -30,7 +30,7 @@ void Element::Element_ISOZ()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Преобразует O2 в O3 под действием света.";
+	Description = "Z-изотоп: радиоактивная жидкость, распадается на фотоны при касании фотона или при отрицательном давлении.";
 	Properties = TYPE_LIQUID | PROP_NEUTPENETRATE | PROP_PHOTPASS;
 
 	LowPressure = IPL;

@@ -34,7 +34,7 @@ void Element::Element_FIRE()
 
 	DefaultProperties.temp = R_TEMP + 400.0f + 273.15f;
 	HeatConduct = 88;
-	Description = "Обычный огонь, распространяется на горючие материалы.";
+	Description = "Поджигает горючие материалы. Нагревает воздух.";
 	Properties = TYPE_GAS|PROP_LIFE_DEC|PROP_LIFE_KILL;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

@@ -30,7 +30,7 @@ void Element::Element_ACEL()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Ускоряет окружающие частицы в направлении движения.";
+	Description = "Ускоритель: разгоняет соседние элементы.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

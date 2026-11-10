@@ -30,7 +30,7 @@ void Element::Element_SWCH()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Проводит ток при подаче второго сигнала.";
+	Description = "Переключатель. Проводит только во включённом состоянии (P-тип включает, N-тип выключает).";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

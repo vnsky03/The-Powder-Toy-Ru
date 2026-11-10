@@ -3,7 +3,7 @@
 void Element::Element_NICE()
 {
 	Identifier = "DEFAULT_PT_NICE";
-	Name = "Никель";
+	Name = "Азот.лёд";
 	Colour = 0xC0E0FF_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -28,7 +28,7 @@ void Element::Element_NICE()
 
 	DefaultProperties.temp = 35.0f;
 	HeatConduct = 46;
-	Description = "Прочный металл, который можно расплавить. Легко плавится при 4000°C.";
+	Description = "Азотный лёд. Очень холодный, от малейшего нагрева плавится в жидкий азот.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

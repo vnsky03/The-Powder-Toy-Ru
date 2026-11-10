@@ -31,7 +31,7 @@ void Element::Element_CRMC()
 	Weight = 100;
 
 	HeatConduct = 35;
-	Description = "Плавится при 4000°C.";
+	Description = "Керамика. Под давлением становится прочнее.";
 	Properties = TYPE_SOLID | PROP_NEUTPASS;
 
 	LowPressure = IPL;

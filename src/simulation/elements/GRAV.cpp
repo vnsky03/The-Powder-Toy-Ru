@@ -7,7 +7,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_GRAV()
 {
 	Identifier = "DEFAULT_PT_GRAV";
-	Name = "Гравитон";
+	Name = "Грав.пыль";
 	Colour = 0x202020_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_POWDERS;
@@ -31,7 +31,7 @@ void Element::Element_GRAV()
 	Weight = 85;
 
 	HeatConduct = 70;
-	Description = "Тёмная материя, притягивающая частицы и свет.";
+	Description = "Гравитационная пыль. Очень лёгкая пыль, меняет цвет в зависимости от скорости.";
 	Properties = TYPE_PART | PROP_LIFE_DEC;
 
 	LowPressure = IPL;

@@ -29,7 +29,7 @@ void Element::Element_COAL()
 	Weight = 100;
 
 	HeatConduct = 200;
-	Description = "Медленно сгорает при высоких температурах.";
+	Description = "Уголь. Горит очень медленно. Раскаляется докрасна.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

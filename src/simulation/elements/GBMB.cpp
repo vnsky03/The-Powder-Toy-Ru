@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_GBMB()
 {
 	Identifier = "DEFAULT_PT_GBMB";
-	Name = "Уничтожитель";
+	Name = "Грав.бомба";
 	Colour = 0x1144BB_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_FORCE;
@@ -31,7 +31,7 @@ void Element::Element_GBMB()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Уничтожает всё вокруг с очень большой силой.";
+	Description = "Гравитационная бомба. Прилипает к первому, чего коснётся, затем создаёт сильный гравитационный толчок.";
 	Properties = TYPE_PART|PROP_LIFE_DEC|PROP_LIFE_KILL_DEC;
 
 	LowPressure = IPL;

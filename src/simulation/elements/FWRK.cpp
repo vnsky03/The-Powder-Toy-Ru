@@ -30,7 +30,7 @@ void Element::Element_FWRK()
 	Weight = 97;
 
 	HeatConduct = 100;
-	Description = "При контакте или нагреве взлетает вверх и взрывается.";
+	Description = "Первая версия салюта, срабатывает от тепла и нейтронов.";
 	Properties = TYPE_PART|PROP_LIFE_DEC;
 	CarriesTypeIn = 1U << FIELD_CTYPE;
 

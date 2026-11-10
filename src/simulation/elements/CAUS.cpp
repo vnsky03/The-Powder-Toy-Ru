@@ -5,7 +5,7 @@ static int update(UPDATE_FUNC_ARGS);
 void Element::Element_CAUS()
 {
 	Identifier = "DEFAULT_PT_CAUS";
-	Name = "Потенциальный";
+	Name = "Едкий газ";
 	Colour = 0x80FFA0_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_GAS;
@@ -29,7 +29,7 @@ void Element::Element_CAUS()
 	Weight = 1;
 
 	HeatConduct = 70;
-	Description = "Направляет движение частиц в случайном направлении.";
+	Description = "Едкий газ, действует как кислота.";
 	Properties = TYPE_GAS|PROP_DEADLY;
 
 	LowPressure = IPL;

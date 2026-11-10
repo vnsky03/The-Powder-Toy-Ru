@@ -3,7 +3,7 @@
 void Element::Element_WHOL()
 {
 	Identifier = "DEFAULT_PT_WHOL";
-	Name = "Белая дыра";
+	Name = "Вентиляция";
 	Colour = 0xEFEFEF_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SPECIAL;
@@ -28,7 +28,7 @@ void Element::Element_WHOL()
 
 	DefaultProperties.temp = R_TEMP - 16.0f + 273.15f;
 	HeatConduct = 255;
-	Description = "Частицы вылетают изнутри. Отключается электричеством.";
+	Description = "Вентиляция воздуха, создаёт давление и отталкивает другие частицы.";
 	Properties = TYPE_SOLID;
 
 	LowPressure = IPL;

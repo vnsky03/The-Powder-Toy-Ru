@@ -5,7 +5,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_BRCK()
 {
 	Identifier = "DEFAULT_PT_BRCK";
-	Name = "Гранит";
+	Name = "Кирпич";
 	Colour = 0x808080_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_SOLIDS;
@@ -29,7 +29,7 @@ void Element::Element_BRCK()
 	Weight = 100;
 
 	HeatConduct = 251;
-	Description = "Очень прочный камень.";
+	Description = "Кирпич: ломкий строительный материал.";
 	Properties = TYPE_SOLID|PROP_HOT_GLOW;
 
 	LowPressure = IPL;

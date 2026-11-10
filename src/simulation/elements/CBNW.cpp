@@ -6,7 +6,7 @@ static int graphics(GRAPHICS_FUNC_ARGS);
 void Element::Element_CBNW()
 {
 	Identifier = "DEFAULT_PT_CBNW";
-	Name = "Углеродная проволока";
+	Name = "Газировка";
 	Colour = 0x2030D0_rgb;
 	MenuVisible = 1;
 	MenuSection = SC_LIQUID;
@@ -31,7 +31,7 @@ void Element::Element_CBNW()
 
 	DefaultProperties.temp = R_TEMP - 2.0f + 273.15f;
 	HeatConduct = 29;
-	Description = "Соединяет соседние частицы.";
+	Description = "Газированная вода. Медленно выделяет углекислый газ.";
 	Properties = TYPE_LIQUID|PROP_CONDUCTS|PROP_LIFE_DEC|PROP_NEUTPENETRATE;
 
 	LowPressure = IPL;

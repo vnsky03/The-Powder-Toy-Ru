@@ -35,7 +35,7 @@ void Element::Element_NEUT()
 
 	DefaultProperties.temp = R_TEMP + 4.0f + 273.15f;
 	HeatConduct = 60;
-	Description = "Взаимодействует с ядерными материалами.";
+	Description = "Нейтроны. Странным образом взаимодействуют с веществом.";
 	Properties = TYPE_ENERGY|PROP_LIFE_DEC|PROP_LIFE_KILL_DEC;
 
 	LowPressure = IPL;
