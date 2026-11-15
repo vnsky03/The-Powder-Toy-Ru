@@ -1,0 +1,280 @@
+# Сборка автономных релизов The Powder Toy RU: Windows x64 и универсальный macOS.
+# Запуск: пуш в main (сборка и проверки), пуш тега vX.Y-ru.N (то же, плюс черновик релиза), вручную.
+# Релиз создаётся только как ЧЕРНОВИК: публикует его человек.
+name: release
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*-ru.*']
+  workflow_dispatch:
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  # Настройки приложения как в оригинале. Не менять: от них зависят папка сохранений и ассоциации файлов.
+  APP_NAME: The Powder Toy
+  APP_COMMENT: Physics sandbox game
+  APP_EXE: powder
+  APP_ID: uk.co.powdertoy.tpt
+  APP_DATA: The Powder Toy
+  APP_VENDOR: powdertoy
+  MOD_ID: '0'
+  # dev: игра не проверяет обновления у оригинала (иначе предложила бы заменить русскую версию английской).
+  RELEASE_TYPE: dev
+  RELEASE_NAME: ${{ github.ref_name }}
+  PACKAGE_MODE: default
+  BSH_LINT: 'no'
+  BSH_DEBUG_RELEASE: release
+  BSH_STATIC_DYNAMIC: static
+
+jobs:
+  windows:
+    name: Windows x64, сборка
+    runs-on: windows-2022
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: msys2 {0}
+    env:
+      BSH_BUILD_PLATFORM: windows
+      BSH_HOST_ARCH: x86_64
+      BSH_HOST_PLATFORM: windows
+      BSH_HOST_LIBC: mingw
+      SEPARATE_DEBUG: 'yes'
+      ASSET_PATH: powder.exe
+      DEBUG_ASSET_PATH: powder.dbg
+    steps:
+      - uses: msys2/setup-msys2@v2
+        with:
+          msystem: UCRT64
+          update: true
+          path-type: strict
+          cache: true
+          install: >-
+            git curl patch cmake p7zip jq
+            mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-pkgconf
+            mingw-w64-ucrt-x86_64-bzip2 mingw-w64-ucrt-x86_64-luajit
+            mingw-w64-ucrt-x86_64-jsoncpp mingw-w64-ucrt-x86_64-curl
+            mingw-w64-ucrt-x86_64-SDL2 mingw-w64-ucrt-x86_64-libpng
+            mingw-w64-ucrt-x86_64-fftw mingw-w64-ucrt-x86_64-meson
+            mingw-w64-ucrt-x86_64-python mingw-w64-ucrt-x86_64-python-pip
+      - run: git config --global core.autocrlf false
+      - uses: actions/checkout@v6
+      - name: Сборка (скрипт оригинального проекта)
+        run: |
+          sed -i 's/\r$//' .github/build.sh .github/mingw-ghactions.ini
+          bash ./.github/build.sh
+      - name: Проверка exe (GUI, без чужих DLL, без отладочной информации)
+        run: |
+          set -euo pipefail
+          cd build
+          ls -l powder.exe
+          objdump -p powder.exe | grep -E 'Subsystem|DLL Name'
+          objdump -p powder.exe | grep -q 'Windows GUI' || { echo "ERROR: exe is not a GUI program, a console window would appear"; exit 1; }
+          if objdump -p powder.exe | sed -n 's/^[[:space:]]*DLL Name: //p' | grep -Ei '^(lib|sdl|zlib|python)|curl|png|jsoncpp|fftw|lua|gcc|stdc|winpthread'; then
+            echo "ERROR: exe imports third-party DLLs (listed above)"; exit 1
+          fi
+          size=$(stat -c %s powder.exe)
+          [ "$size" -lt 60000000 ] || { echo "ERROR: exe is $size bytes, debug info was not stripped"; exit 1; }
+      - name: Упаковка zip
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Path dist | Out-Null
+          Copy-Item build/powder.exe dist/ThePowderToy-RU.exe
+          Copy-Item INSTALL-WINDOWS.txt, LICENSE dist/
+          Compress-Archive -Path dist/* -DestinationPath The-Powder-Toy-RU-windows-x64.zip
+          Get-Item The-Powder-Toy-RU-windows-x64.zip | Select-Object Name, Length
+          Get-FileHash The-Powder-Toy-RU-windows-x64.zip -Algorithm SHA256
+      - uses: actions/upload-artifact@v6
+        with:
+          name: windows-zip
+          path: The-Powder-Toy-RU-windows-x64.zip
+          if-no-files-found: error
+
+  macos:
+    name: macOS ${{ matrix.arch }}, сборка
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: aarch64
+            runner: macos-15
+          - arch: x86_64
+            runner: macos-15-intel
+    env:
+      BSH_BUILD_PLATFORM: darwin
+      BSH_HOST_ARCH: ${{ matrix.arch }}
+      BSH_HOST_PLATFORM: darwin
+      BSH_HOST_LIBC: macos
+      SEPARATE_DEBUG: 'no'
+      ASSET_PATH: powder.dmg
+      DEBUG_ASSET_PATH: BOGUS
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install meson ninja
+      - run: brew install bash coreutils
+      - name: Сборка (скрипт оригинального проекта)
+        run: bash ./.github/build.sh
+      - name: "Проверка: только системные библиотеки"
+        run: |
+          set -euo pipefail
+          file build/powder
+          ls -l build/powder
+          otool -L build/powder
+          if otool -L build/powder | tail -n +2 | awk '{print $1}' | grep -Ev '^(/usr/lib/|/System/Library/)'; then
+            echo "ERROR: binary links non-system libraries (listed above)"; exit 1
+          fi
+      - name: Сохранить приложение
+        run: tar -C build/dmgroot -cf "mac-${{ matrix.arch }}.tar" "$APP_NAME.app"
+      - uses: actions/upload-artifact@v6
+        with:
+          name: mac-${{ matrix.arch }}
+          path: mac-${{ matrix.arch }}.tar
+          if-no-files-found: error
+
+  macos-package:
+    name: macOS универсальный zip
+    needs: macos
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: mac-*
+          merge-multiple: true
+          path: thin
+      - name: Склейка двух архитектур, подпись, zip
+        run: |
+          set -euo pipefail
+          ls -l thin
+          mkdir arm64 x86_64
+          tar -xf thin/mac-aarch64.tar -C arm64
+          tar -xf thin/mac-x86_64.tar -C x86_64
+          folder="The Powder Toy RU"
+          app="$folder/The Powder Toy RU.app"
+          mkdir "$folder"
+          cp -R "x86_64/$APP_NAME.app" "$app"
+          lipo -create -output "$app/Contents/MacOS/$APP_EXE" \
+            "arm64/$APP_NAME.app/Contents/MacOS/$APP_EXE" \
+            "x86_64/$APP_NAME.app/Contents/MacOS/$APP_EXE"
+          chmod +x "$app/Contents/MacOS/$APP_EXE"
+          archs=$(lipo -archs "$app/Contents/MacOS/$APP_EXE")
+          echo "archs: $archs"
+          case "$archs" in *arm64*x86_64*|*x86_64*arm64*) ;; *) echo "ERROR: expected both arm64 and x86_64"; exit 1;; esac
+          codesign --force --sign - "$app"
+          codesign --verify --deep --strict --verbose=2 "$app"
+          cp INSTALL-MACOS.txt LICENSE "$folder/"
+          ditto -c -k --sequesterRsrc --keepParent "$folder" The-Powder-Toy-RU-macOS-universal.zip
+          ls -l The-Powder-Toy-RU-macOS-universal.zip
+          shasum -a 256 The-Powder-Toy-RU-macOS-universal.zip
+      - uses: actions/upload-artifact@v6
+        with:
+          name: macos-zip
+          path: The-Powder-Toy-RU-macOS-universal.zip
+          if-no-files-found: error
+
+  smoke-windows:
+    name: Windows x64, проверка архива
+    needs: windows
+    runs-on: windows-2022
+    timeout-minutes: 15
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: windows-zip
+          path: dl
+      - name: Распаковать и запустить на чистой системе
+        shell: pwsh
+        run: |
+          Expand-Archive -Path dl/The-Powder-Toy-RU-windows-x64.zip -DestinationPath C:\smoke
+          Get-ChildItem C:\smoke | Format-Table Name, Length
+          $names = (Get-ChildItem C:\smoke).Name | Sort-Object
+          if (($names -join ',') -ne 'INSTALL-WINDOWS.txt,LICENSE,ThePowderToy-RU.exe') { throw "Unexpected archive content: $($names -join ', ')" }
+          $p = Start-Process -FilePath C:\smoke\ThePowderToy-RU.exe -WorkingDirectory C:\smoke -PassThru
+          Start-Sleep -Seconds 12
+          if ($p.HasExited) { throw "The game exited by itself, exit code $($p.ExitCode)" }
+          Write-Host "The game is still running after 12 s"
+          Stop-Process -Id $p.Id -Force
+
+  smoke-macos:
+    name: macOS ${{ matrix.runner }}, проверка архива
+    needs: macos-package
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [macos-15, macos-15-intel]
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: macos-zip
+          path: dl
+      - name: Распаковать и запустить
+        run: |
+          set -euo pipefail
+          mkdir smoke
+          ditto -x -k dl/The-Powder-Toy-RU-macOS-universal.zip smoke
+          ls -l "smoke/The Powder Toy RU"
+          app="smoke/The Powder Toy RU/The Powder Toy RU.app"
+          bin="$app/Contents/MacOS/powder"
+          test -x "$bin" || { echo "ERROR: binary is not executable"; exit 1; }
+          archs=$(lipo -archs "$bin")
+          echo "archs: $archs"
+          case "$archs" in *arm64*x86_64*|*x86_64*arm64*) ;; *) echo "ERROR: expected both arm64 and x86_64"; exit 1;; esac
+          for arch in arm64 x86_64; do
+            echo "== dependencies ($arch)"
+            otool -arch "$arch" -L "$bin"
+            if otool -arch "$arch" -L "$bin" | tail -n +2 | awk '{print $1}' | grep -Ev '^(/usr/lib/|/System/Library/)'; then
+              echo "ERROR: non-system libraries (listed above)"; exit 1
+            fi
+          done
+          codesign --verify --deep --strict --verbose=2 "$app"
+          "$bin" > smoke.log 2>&1 &
+          pid=$!
+          sleep 12
+          if ! kill -0 "$pid" 2>/dev/null; then echo "ERROR: the game exited by itself"; cat smoke.log; exit 1; fi
+          echo "The game is still running after 12 s"
+          kill "$pid"
+
+  release:
+    name: Черновик релиза
+    if: startsWith(github.ref, 'refs/tags/')
+    needs: [smoke-windows, smoke-macos]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/download-artifact@v8
+        with:
+          pattern: '*-zip'
+          merge-multiple: true
+          path: assets
+      - name: Создать черновик релиза
+        run: |
+          set -euo pipefail
+          ls -l assets
+          sha256sum assets/*.zip
+          existing=$(gh release list --limit 100 --json tagName --jq '[.[] | select(.tagName == env.TAG)] | length')
+          if [ "$existing" != "0" ]; then
+            echo "ERROR: a release for tag $TAG already exists (draft or published). Delete the draft or use a new tag."; exit 1
+          fi
+          gh release create "$TAG" assets/*.zip --draft --verify-tag \
+            --title "The Powder Toy RU ${TAG#v}" --notes-file .github/release-notes.md
