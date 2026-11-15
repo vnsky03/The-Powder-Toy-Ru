@@ -586,26 +586,26 @@ inline String operator+(String::value_type lhs, String const &rhs) { return lhs 
 inline String operator+(String::value_type lhs, String &&rhs) { return lhs + static_cast<std::basic_string<char32_t> &&>(rhs); }
 inline String operator+(String::value_type const *lhs, String const &rhs) { return lhs + static_cast<std::basic_string<char32_t> const &>(rhs); }
 inline String operator+(String::value_type const *lhs, String &&rhs) { return lhs + static_cast<std::basic_string<char32_t> &&>(rhs); }
-template<size_t N> inline String operator+(String const &lhs, ByteString::value_type const (&rhs)[N]) { return static_cast<std::basic_string<char32_t> const &>(lhs) + ByteString(rhs).FromAscii(); }
-template<size_t N> inline String operator+(String &&lhs, ByteString::value_type const (&rhs)[N]) { return static_cast<std::basic_string<char32_t> &&>(lhs) + ByteString(rhs).FromAscii(); }
-template<size_t N> inline String operator+(ByteString::value_type const (&lhs)[N], String const &rhs) { return ByteString(lhs).FromAscii() + static_cast<std::basic_string<char32_t> const &>(rhs); }
-template<size_t N> inline String operator+(ByteString::value_type const (&lhs)[N], String &&rhs) { return ByteString(lhs).FromAscii() + static_cast<std::basic_string<char32_t> &&>(rhs); }
+template<size_t N> inline String operator+(String const &lhs, ByteString::value_type const (&rhs)[N]) { return static_cast<std::basic_string<char32_t> const &>(lhs) + String::FromUtf8OrAscii(ByteString(rhs)); }
+template<size_t N> inline String operator+(String &&lhs, ByteString::value_type const (&rhs)[N]) { return static_cast<std::basic_string<char32_t> &&>(lhs) + String::FromUtf8OrAscii(ByteString(rhs)); }
+template<size_t N> inline String operator+(ByteString::value_type const (&lhs)[N], String const &rhs) { return String::FromUtf8OrAscii(ByteString(lhs)) + static_cast<std::basic_string<char32_t> const &>(rhs); }
+template<size_t N> inline String operator+(ByteString::value_type const (&lhs)[N], String &&rhs) { return String::FromUtf8OrAscii(ByteString(lhs)) + static_cast<std::basic_string<char32_t> &&>(rhs); }
 
 inline bool operator==(String const &lhs, String const &rhs) { return static_cast<std::basic_string<char32_t> const &>(lhs) == static_cast<std::basic_string<char32_t> const &>(rhs); }
 inline bool operator==(String const &lhs, std::basic_string<char32_t> const &rhs) { return static_cast<std::basic_string<char32_t> const &>(lhs) == rhs; }
 inline bool operator==(String const &lhs, String::value_type const *rhs) { return static_cast<std::basic_string<char32_t> const &>(lhs) == rhs; }
 inline bool operator==(std::basic_string<char32_t> const &lhs, String const &rhs) { return lhs == static_cast<std::basic_string<char32_t> const &>(rhs); }
 inline bool operator==(String::value_type const *lhs, String const &rhs) { return lhs == static_cast<std::basic_string<char32_t> const &>(rhs); }
-template<size_t N> inline bool operator==(String const &lhs, ByteString::value_type const (&rhs)[N]) { return static_cast<std::basic_string<char32_t> const &>(lhs) == ByteString(rhs).FromAscii(); }
-template<size_t N> inline bool operator==(ByteString::value_type const (&lhs)[N], String const &rhs) { return ByteString(lhs).FromAscii() == static_cast<std::basic_string<char32_t> const &>(rhs); }
+template<size_t N> inline bool operator==(String const &lhs, ByteString::value_type const (&rhs)[N]) { return static_cast<std::basic_string<char32_t> const &>(lhs) == String::FromUtf8OrAscii(ByteString(rhs)); }
+template<size_t N> inline bool operator==(ByteString::value_type const (&lhs)[N], String const &rhs) { return String::FromUtf8OrAscii(ByteString(lhs)) == static_cast<std::basic_string<char32_t> const &>(rhs); }
 
 inline bool operator!=(String const &lhs, String const &rhs) { return static_cast<std::basic_string<char32_t> const &>(lhs) != static_cast<std::basic_string<char32_t> const &>(rhs); }
 inline bool operator!=(String const &lhs, std::basic_string<char32_t> const &rhs) { return static_cast<std::basic_string<char32_t> const &>(lhs) != rhs; }
 inline bool operator!=(String const &lhs, String::value_type const *rhs) { return static_cast<std::basic_string<char32_t> const &>(lhs) != rhs; }
 inline bool operator!=(std::basic_string<char32_t> const &lhs, String const &rhs) { return lhs != static_cast<std::basic_string<char32_t> const &>(rhs); }
 inline bool operator!=(String::value_type const *lhs, String const &rhs) { return lhs != static_cast<std::basic_string<char32_t> const &>(rhs); }
-template<size_t N> inline bool operator!=(String const &lhs, ByteString::value_type const (&rhs)[N]) { return static_cast<std::basic_string<char32_t> const &>(lhs) != ByteString(rhs).FromAscii(); }
-template<size_t N> inline bool operator!=(ByteString::value_type const (&lhs)[N], String const &rhs) { return ByteString(lhs).FromAscii() != static_cast<std::basic_string<char32_t> const &>(rhs); }
+template<size_t N> inline bool operator!=(String const &lhs, ByteString::value_type const (&rhs)[N]) { return static_cast<std::basic_string<char32_t> const &>(lhs) != String::FromUtf8OrAscii(ByteString(rhs)); }
+template<size_t N> inline bool operator!=(ByteString::value_type const (&lhs)[N], String const &rhs) { return String::FromUtf8OrAscii(ByteString(lhs)) != static_cast<std::basic_string<char32_t> const &>(rhs); }
 
 inline String ByteString::FromAscii() const
 {
